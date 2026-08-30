@@ -4,505 +4,750 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maison Rokhaya — Beauty & Crêpes · Melaka</title>
-  <meta name="description" content="Hair braiding & handmade crêpes in Melaka. Home visits, MMU campus. Available 7 days/week. Book via WhatsApp.">
+  <meta name="description" content="Hair braiding & handmade crêpes in Melaka. Home visits, MMU campus. 7 days a week.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,600;1,9..144,700&family=Archivo:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,600;1,9..144,800&family=Archivo:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================================================================
-     NAV — sticky header
-     LOGO: replace .logo-placeholder with <img src="logo.png" alt="Maison Rokhaya" class="nav__logo-img">
-================================================================ -->
+<!-- ═══════════════════════════════════════════════════════════
+     WORLD FLASH — color burst for anime moments (JS-injected)
+═══════════════════════════════════════════════════════════ -->
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAV
+═══════════════════════════════════════════════════════════ -->
 <header class="nav" id="nav">
   <div class="container nav__inner">
     <a href="#" class="nav__brand">
       <div class="logo-frame">
-        <!-- LOGO PLACEHOLDER — swap with your actual logo image -->
-        <div class="logo-placeholder" aria-hidden="true">
-          <span>MR</span>
-        </div>
+        <!-- LOGO: replace with <img src="logo.png" alt="Maison Rokhaya" class="logo-img"> -->
+        <div class="logo-ph" aria-hidden="true"><span>MR</span></div>
       </div>
-      <div class="nav__brand-text">
-        <span class="nav__brand-name">Maison Rokhaya</span>
-        <span class="nav__brand-sub">Beauty &amp; Crêpes</span>
+      <div class="nav__names">
+        <span class="nav__name">Maison Rokhaya</span>
+        <span class="nav__sub">Beauty &amp; Crêpes</span>
       </div>
     </a>
+
+    <div class="nav__worlds">
+      <a href="#world-hair"   class="nav__world-btn nav__world-btn--hair  is-active" id="navHairBtn">✂ Hair</a>
+      <a href="#world-crepes" class="nav__world-btn nav__world-btn--crepes"          id="navCrepeBtn">🍽 Crêpes</a>
+    </div>
+
     <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav__links" id="navLinks" role="list">
-      <li><a href="#menu">Hair</a></li>
-      <li><a href="#menu-crepes">Crêpes</a></li>
-      <li><a href="#story">Our Story</a></li>
-      <li><a href="#how-it-works">Service Area</a></li>
-      <li><a href="#contact" class="btn btn--gold btn--sm">Book Now</a></li>
+      <li><a href="#world-hair">Hair</a></li>
+      <li><a href="#world-crepes">Crêpes</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#how-it-works">Area</a></li>
+      <li><a href="#contact-hair"   class="btn btn--rose btn--sm">Book Hair</a></li>
+      <li><a href="#contact-crepes" class="btn btn--gold btn--sm">Order Crêpes</a></li>
     </ul>
   </div>
 </header>
 
 <main>
 
-<!-- ================================================================
-     HERO
-================================================================ -->
-<section class="hero" id="hero">
-  <div class="hero__texture" aria-hidden="true"></div>
-  <div class="container hero__inner">
-    <div class="hero__content">
-      <p class="hero__eyebrow">Melaka, Malaysia · Home visits &amp; MMU campus</p>
-      <h1 class="hero__title">
-        <em>Crêpé —</em><br>
-        braided,<br>
-        folded &amp;<br>
-        beautiful.
+<!-- ═══════════════════════════════════════════════════════════
+     DUAL HERO — choose your world
+═══════════════════════════════════════════════════════════ -->
+<section class="dual-hero" id="hero">
+  <a href="#world-hair" class="dh-panel dh-panel--hair">
+    <div class="dh-panel__bg" aria-hidden="true">
+      <div class="dh-panel__texture"></div>
+    </div>
+    <div class="dh-panel__content">
+      <span class="dh-panel__tag">World I</span>
+      <h1 class="dh-panel__title">
+        <em>Beauty</em><br>& Braids
       </h1>
-      <p class="hero__sub">Hair artistry &amp; handmade crêpes, wherever you are in Melaka. No salon, no fixed kitchen — just real skill at your door.</p>
-      <div class="hero__actions">
-        <a href="#contact" class="btn btn--gold">Book an appointment</a>
-        <a href="#menu-crepes" class="btn btn--ghost">See the crêpe menu</a>
-      </div>
-      <p class="hero__trust">
-        <span>✓ Reply within 24h</span>
-        <span>✓ DuitNow &amp; cash</span>
-        <span>✓ 7 days a week</span>
-      </p>
+      <p class="dh-panel__sub">Home visits · MMU campus<br>All textures welcome</p>
+      <span class="dh-panel__cta btn btn--rose">Explore ↓</span>
     </div>
-    <div class="hero__visual" aria-hidden="true">
-      <!-- CSS-drawn floating crêpe illustration -->
-      <div class="crepe-illus">
-        <div class="crepe-illus__body"></div>
-        <div class="crepe-illus__shine"></div>
-        <div class="crepe-illus__steam crepe-illus__steam--a"></div>
-        <div class="crepe-illus__steam crepe-illus__steam--b"></div>
-        <div class="crepe-illus__steam crepe-illus__steam--c"></div>
-      </div>
-      <div class="hero__badge">
-        <span class="hero__badge-num">4</span>
-        <span class="hero__badge-lbl">crêpe flavours</span>
-      </div>
-    </div>
-  </div>
-  <a href="#marquee" class="hero__scroll-hint" aria-label="Scroll down">
-    <span class="hero__scroll-dot"></span>
+    <div class="dh-scissors" aria-hidden="true">✂</div>
   </a>
+  <a href="#world-crepes" class="dh-panel dh-panel--crepes">
+    <div class="dh-panel__bg" aria-hidden="true">
+      <div class="dh-stars" id="heroStars"></div>
+      <div class="dh-rays" aria-hidden="true"></div>
+    </div>
+    <div class="dh-panel__content">
+      <span class="dh-panel__tag dh-panel__tag--gold">World II</span>
+      <h1 class="dh-panel__title dh-panel__title--light">
+        <em>Crêpé</em><br>in Space
+      </h1>
+      <p class="dh-panel__sub dh-panel__sub--light">Made from scratch · Delivered hot<br>Ixora &amp; Univ. Green</p>
+      <span class="dh-panel__cta btn btn--gold">Explore ↓</span>
+    </div>
+    <!-- Animated crêpe orb -->
+    <div class="dh-orb" aria-hidden="true">
+      <div class="dh-orb__body"></div>
+      <div class="dh-orb__shine"></div>
+    </div>
+  </a>
+  <div class="dh-divider" aria-hidden="true">
+    <div class="dh-divider__line"></div>
+    <div class="dh-divider__badge">VS</div>
+  </div>
 </section>
 
-<!-- ================================================================
-     MARQUEE TICKER
-================================================================ -->
-<div class="marquee" id="marquee" aria-hidden="true">
-  <div class="marquee__track">
-    <span>Cornrows</span><b>✦</b>
-    <span>Box Braids</span><b>✦</b>
-    <span>Twists &amp; Locks</span><b>✦</b>
-    <span>Cut &amp; Blow-dry</span><b>✦</b>
-    <span>Deep Treatment</span><b>✦</b>
-    <span>Butter &amp; Sugar</span><b>✦</b>
-    <span>Nutella &amp; Banana</span><b>✦</b>
-    <span>Ham &amp; Cheese</span><b>✦</b>
-    <span>Spicy Chicken &amp; Cheese</span><b>✦</b>
-    <span>Home Visits</span><b>✦</b>
-    <span>MMU Campus</span><b>✦</b>
-    <span>7 Days a Week</span><b>✦</b>
-    <!-- duplicate for seamless loop -->
-    <span>Cornrows</span><b>✦</b>
-    <span>Box Braids</span><b>✦</b>
-    <span>Twists &amp; Locks</span><b>✦</b>
-    <span>Cut &amp; Blow-dry</span><b>✦</b>
-    <span>Deep Treatment</span><b>✦</b>
-    <span>Butter &amp; Sugar</span><b>✦</b>
-    <span>Nutella &amp; Banana</span><b>✦</b>
-    <span>Ham &amp; Cheese</span><b>✦</b>
-    <span>Spicy Chicken &amp; Cheese</span><b>✦</b>
-    <span>Home Visits</span><b>✦</b>
-    <span>MMU Campus</span><b>✦</b>
-    <span>7 Days a Week</span><b>✦</b>
-  </div>
-</div>
+<!-- ═══════════════════════════════════════════════════════════
+  ██╗    ██╗ ██████╗ ██████╗ ██╗     ██████╗      ██╗
+  ██║    ██║██╔═══██╗██╔══██╗██║     ██╔══██╗    ███║
+  ██║ █╗ ██║██║   ██║██████╔╝██║     ██║  ██║    ╚██║
+  ██║███╗██║██║   ██║██╔══██╗██║     ██║  ██║     ██║
+  ╚███╔███╔╝╚██████╔╝██║  ██║███████╗██████╔╝     ██║
+   ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═════╝      ╚═╝
+  WORLD I — HAIR (elegant, editorial, calm)
+═══════════════════════════════════════════════════════════ -->
+<div class="world world--hair" id="world-hair">
 
-<!-- ================================================================
-     MENU — two columns: hair + crêpes
-================================================================ -->
-<section class="menu" id="menu">
-  <div class="menu__cols">
-
-    <!-- Hair column -->
-    <div class="menu__col menu__col--hair">
-      <div class="menu__col-pad">
-        <p class="col-tag">Hair services</p>
-        <h2 class="menu__col-h">Your hair,<br>your story.</h2>
-        <p class="menu__col-note">All prices from · home visits available near MMU</p>
-        <ul class="service-list" role="list">
-
-          <li class="service-item">
-            <div class="service-item__info">
-              <h3>Cornrows</h3>
-              <p>Classic, clean, protective. From simple lines to intricate patterns.</p>
-            </div>
-            <span class="price">from RM 45</span>
-          </li>
-
-          <li class="service-item">
-            <div class="service-item__info">
-              <h3>Box Braids</h3>
-              <p>Individual braids, any length. Extensions available for fuller volume.</p>
-            </div>
-            <span class="price">from RM 90</span>
-          </li>
-
-          <li class="service-item">
-            <div class="service-item__info">
-              <h3>Twists &amp; Locks</h3>
-              <p>Two-strand twists, Senegalese twists, starter locs — all textures welcome.</p>
-            </div>
-            <span class="price">from RM 70</span>
-          </li>
-
-          <li class="service-item">
-            <div class="service-item__info">
-              <h3>Cut &amp; Blow-dry</h3>
-              <p>Precision cut with a professional blow-out and finish.</p>
-            </div>
-            <span class="price">RM 35</span>
-          </li>
-
-          <li class="service-item">
-            <div class="service-item__info">
-              <h3>Deep Treatment</h3>
-              <p>Intense moisture and protein mask. The reset your scalp deserves.</p>
-            </div>
-            <span class="price">RM 30</span>
-          </li>
-
-        </ul>
-        <a href="#contact" class="btn btn--rose menu__col-cta">Book a hair session</a>
+  <!-- Hair hero -->
+  <section class="hair-hero">
+    <div class="container hair-hero__inner">
+      <div class="hair-hero__text reveal">
+        <p class="w-label">World I · Hair</p>
+        <h2 class="hair-hero__h">Your hair,<br>your <em>story.</em></h2>
+        <p class="hair-hero__sub">Expert braiding and hair care, delivered to your door near MMU Melaka. All textures, all styles, all welcome.</p>
+        <a href="#contact-hair" class="btn btn--rose">Book an appointment</a>
       </div>
-    </div>
-
-    <!-- Crêpes column -->
-    <div class="menu__col menu__col--crepes" id="menu-crepes">
-      <div class="menu__col-pad">
-        <p class="col-tag col-tag--light">Crêpes</p>
-        <h2 class="menu__col-h menu__col-h--light">Warm, folded,<br>irresistible.</h2>
-
-        <div class="delivery-note">
-          <span class="delivery-note__icon">🛵</span>
-          <p><strong>Group delivery:</strong> Ixora &amp; University Green Apartment only. Elsewhere: pick up with your hair appointment.</p>
+      <div class="hair-hero__deco reveal reveal--delay" aria-hidden="true">
+        <div class="hair-braid-deco">
+          <div class="braid-strand braid-strand--a"></div>
+          <div class="braid-strand braid-strand--b"></div>
+          <div class="braid-strand braid-strand--c"></div>
         </div>
-
-        <!-- !! CREPE CARDS — click opens photo modal -->
-        <ul class="crepe-list" role="list">
-
-          <li class="crepe-card" data-crepe="butter-sugar" tabindex="0" role="button" aria-label="View Butter & Sugar crêpe photos">
-            <div class="crepe-card__thumb crepe-card__thumb--bs" aria-hidden="true"></div>
-            <div class="crepe-card__body">
-              <div class="crepe-card__top">
-                <h3>Butter &amp; Sugar</h3>
-                <span class="price price--light">RM 6</span>
-              </div>
-              <p>The timeless classic. Warm crêpe, real butter, golden sugar.</p>
-              <span class="crepe-card__peek">👁 See photos</span>
-            </div>
-          </li>
-
-          <li class="crepe-card" data-crepe="nutella-banana" tabindex="0" role="button" aria-label="View Nutella & Banana crêpe photos">
-            <div class="crepe-card__thumb crepe-card__thumb--nb" aria-hidden="true"></div>
-            <div class="crepe-card__body">
-              <div class="crepe-card__top">
-                <h3>Nutella &amp; Banana</h3>
-                <span class="price price--light">RM 9</span>
-              </div>
-              <p>Generous Nutella, fresh banana slices. Rich and indulgent.</p>
-              <span class="crepe-card__peek">👁 See photos</span>
-            </div>
-          </li>
-
-          <li class="crepe-card" data-crepe="ham-cheese" tabindex="0" role="button" aria-label="View Ham & Cheese crêpe photos">
-            <div class="crepe-card__thumb crepe-card__thumb--hc" aria-hidden="true"></div>
-            <div class="crepe-card__body">
-              <div class="crepe-card__top">
-                <h3>Ham &amp; Cheese</h3>
-                <span class="price price--light">RM 11</span>
-              </div>
-              <p>Smoked ham, melted cheese, wrapped in a soft golden crêpe.</p>
-              <span class="crepe-card__peek">👁 See photos</span>
-            </div>
-          </li>
-
-          <li class="crepe-card" data-crepe="spicy-chicken" tabindex="0" role="button" aria-label="View Spicy Chicken & Cheese crêpe photos">
-            <div class="crepe-card__thumb crepe-card__thumb--sc" aria-hidden="true"></div>
-            <div class="crepe-card__body">
-              <div class="crepe-card__top">
-                <h3>Spicy Chicken &amp; Cheese</h3>
-                <span class="price price--light">RM 12</span>
-              </div>
-              <p>Juicy spiced chicken, melted cheese. Our bestseller.</p>
-              <span class="crepe-card__peek">👁 See photos</span>
-            </div>
-          </li>
-
-        </ul>
-        <a href="#contact" class="btn btn--gold menu__col-cta" data-prefill="group-crepe">Order crêpes</a>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- ================================================================
-     AT A GLANCE — 4 photo cards
-     PHOTOS: Add background-image to each .glance-card in style.css
-     or inline: style="background-image:url('images/your-photo.jpg')"
-================================================================ -->
-<section class="glance" aria-label="Visual glimpse">
-  <div class="glance__grid">
-
-    <div class="glance__card glance__card--1" role="img" aria-label="Hair braiding station">
-      <!-- PHOTO: add background-image: url('images/braiding.jpg') -->
-      <div class="glance__hint" aria-hidden="true">📸 Your photo here</div>
-      <div class="glance__label"><span>Braiding station</span></div>
-    </div>
-
-    <div class="glance__card glance__card--2" role="img" aria-label="Crêpe griddle in action">
-      <!-- PHOTO: add background-image: url('images/crepe-griddle.jpg') -->
-      <div class="glance__hint" aria-hidden="true">📸 Your photo here</div>
-      <div class="glance__label"><span>Fresh crêpes</span></div>
-    </div>
-
-    <div class="glance__card glance__card--3" role="img" aria-label="Client waiting corner">
-      <!-- PHOTO: add background-image: url('images/corner.jpg') -->
-      <div class="glance__hint" aria-hidden="true">📸 Your photo here</div>
-      <div class="glance__label"><span>Waiting corner</span></div>
-    </div>
-
-    <div class="glance__card glance__card--4" role="img" aria-label="MMU campus stop">
-      <!-- PHOTO: add background-image: url('images/mmu.jpg') -->
-      <div class="glance__hint" aria-hidden="true">📸 Your photo here</div>
-      <div class="glance__label"><span>MMU campus</span></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================================================================
-     STORY
-================================================================ -->
-<section class="story" id="story">
-  <div class="container story__inner">
-    <div class="story__text reveal">
-      <p class="col-tag col-tag--gold">Our story</p>
-      <h2 class="story__h">Two crafts.<br>One woman.<br><em>Zero fixed address.</em></h2>
-      <p>Rokhaya brings two passions into one micro-enterprise, rooted in the MMU Melaka community. She braids hair with patience and precision — and flips crêpes with the same dedication. The name? A little twist on the French word <em>crêpé</em>, which means both "crinkled" (as in your natural texture) and, of course, crêpe.</p>
-      <p>No salon walls. No fixed kitchen. Just real skill, real flavours, and real confidence — delivered to your door or your campus corner.</p>
-    </div>
-    <div class="story__stats reveal reveal--delay">
-      <div class="story__stat">
-        <span class="story__num">2</span>
-        <span class="story__lbl">crafts, one person</span>
-      </div>
-      <div class="story__stat">
-        <span class="story__num">0</span>
-        <span class="story__lbl">fixed address</span>
-      </div>
-      <div class="story__stat">
-        <span class="story__num">7/7</span>
-        <span class="story__lbl">days a week</span>
-      </div>
+  <!-- Hair marquee -->
+  <div class="hair-marquee" aria-hidden="true">
+    <div class="hair-marquee__track">
+      <span>Cornrows</span><b>·</b><span>Box Braids</span><b>·</b>
+      <span>Twists & Locks</span><b>·</b><span>Cut & Blow-dry</span><b>·</b>
+      <span>Deep Treatment</span><b>·</b><span>Home Visits</span><b>·</b>
+      <span>MMU Campus</span><b>·</b><span>7 Days / Week</span><b>·</b>
+      <span>Cornrows</span><b>·</b><span>Box Braids</span><b>·</b>
+      <span>Twists & Locks</span><b>·</b><span>Cut & Blow-dry</span><b>·</b>
+      <span>Deep Treatment</span><b>·</b><span>Home Visits</span><b>·</b>
+      <span>MMU Campus</span><b>·</b><span>7 Days / Week</span><b>·</b>
     </div>
   </div>
-</section>
 
-<!-- ================================================================
-     TESTIMONIAL
-================================================================ -->
-<section class="testi">
-  <div class="container">
-    <div class="testi__card reveal">
-      <div class="testi__quote-mark" aria-hidden="true">"</div>
-      <blockquote class="testi__text">
-        I wanted box braids done at my dorm and Rokhaya came with everything she needed. Best braiding in Melaka — and she surprised me with a crêpe at the end. That honestly made my whole week. Will 100% book again.
-      </blockquote>
-      <cite class="testi__author">
-        <strong>Farah N.</strong>
-        <span>MMU Melaka student</span>
-      </cite>
-      <div class="testi__stars" aria-label="5 stars">★★★★★</div>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-     HOW IT WORKS / SERVICE AREA
-================================================================ -->
-<section class="how" id="how-it-works">
-  <div class="container">
-    <div class="section-hd section-hd--center reveal">
-      <p class="col-tag col-tag--light">How it works</p>
-      <h2 class="how__h">Simple by design</h2>
-      <p class="how__sub">No salon to visit — unless you really have to. Here's how each service works.</p>
-    </div>
-    <div class="how__grid">
-
-      <div class="how__card reveal">
-        <div class="how__icon" aria-hidden="true">✂️</div>
-        <h3>Hair appointments</h3>
-        <div class="how__scenario">
-          <div class="how__tag">Near MMU (~5 km radius)</div>
-          <p>She comes to <strong>your place.</strong> Dorm, flat, or home — bring yourself, she brings everything else.</p>
-        </div>
-        <div class="how__scenario how__scenario--alt">
-          <div class="how__tag how__tag--alt">Outside that zone</div>
-          <p>You come to <strong>her.</strong> She's based near MMU. Book and she'll confirm the address on WhatsApp.</p>
-        </div>
-        <p class="how__foot">📲 All bookings confirmed within 24h</p>
+  <!-- Hair services menu -->
+  <section class="hair-menu">
+    <div class="container">
+      <div class="section-hd reveal">
+        <p class="w-label">Services</p>
+        <h2 class="hair-menu__h">What we do</h2>
       </div>
-
-      <div class="how__card reveal reveal--delay">
-        <div class="how__icon" aria-hidden="true">🍽️</div>
-        <h3>Crêpe orders</h3>
-        <div class="how__zones">
-          <div class="how__zone how__zone--yes">
-            <p class="how__zone-lbl">🛵 Delivery available</p>
-            <ul>
-              <li><strong>Ixora</strong></li>
-              <li><strong>University Green Apartment</strong></li>
-            </ul>
-            <p class="how__zone-note">Group orders only</p>
+      <ul class="hair-services reveal" role="list">
+        <li class="hs-item">
+          <div class="hs-item__num" aria-hidden="true">01</div>
+          <div class="hs-item__body">
+            <h3>Cornrows</h3>
+            <p>Classic, clean, protective. From simple lines to intricate patterns — sized to your head, styled to your personality.</p>
           </div>
-          <div class="how__zone how__zone--pick">
-            <p class="how__zone-lbl">🤝 Pick up</p>
-            <p>Everywhere else: collect your crêpe during your hair appointment.</p>
+          <span class="hs-item__price">from RM 45</span>
+        </li>
+        <li class="hs-item">
+          <div class="hs-item__num" aria-hidden="true">02</div>
+          <div class="hs-item__body">
+            <h3>Box Braids</h3>
+            <p>Individual braids, any length. Add extensions for volume. Protective and long-lasting.</p>
+          </div>
+          <span class="hs-item__price">from RM 90</span>
+        </li>
+        <li class="hs-item">
+          <div class="hs-item__num" aria-hidden="true">03</div>
+          <div class="hs-item__body">
+            <h3>Twists &amp; Locks</h3>
+            <p>Two-strand twists, Senegalese twists, starter locs. All textures and curl patterns welcome.</p>
+          </div>
+          <span class="hs-item__price">from RM 70</span>
+        </li>
+        <li class="hs-item">
+          <div class="hs-item__num" aria-hidden="true">04</div>
+          <div class="hs-item__body">
+            <h3>Cut &amp; Blow-dry</h3>
+            <p>Precision cut with a professional blow-out and finish. Shape and style in one session.</p>
+          </div>
+          <span class="hs-item__price">RM 35</span>
+        </li>
+        <li class="hs-item">
+          <div class="hs-item__num" aria-hidden="true">05</div>
+          <div class="hs-item__body">
+            <h3>Deep Treatment</h3>
+            <p>Intense moisture and protein mask. The scalp and strand reset your hair has been waiting for.</p>
+          </div>
+          <span class="hs-item__price">RM 30</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Hair at-a-glance -->
+  <section class="glance glance--hair">
+    <div class="glance__grid">
+      <div class="glance__card glance__card--h1" role="img" aria-label="Hair braiding session">
+        <!-- PHOTO: style="background-image:url('images/hair1.jpg')" -->
+        <div class="glance__ph" aria-hidden="true">📸 Add your photo</div>
+        <div class="glance__lbl"><span>In session</span></div>
+      </div>
+      <div class="glance__card glance__card--h2" role="img" aria-label="Finished braids">
+        <!-- PHOTO: style="background-image:url('images/hair2.jpg')" -->
+        <div class="glance__ph" aria-hidden="true">📸 Add your photo</div>
+        <div class="glance__lbl"><span>The result</span></div>
+      </div>
+      <div class="glance__card glance__card--h3" role="img" aria-label="Tools and products">
+        <!-- PHOTO: style="background-image:url('images/hair3.jpg')" -->
+        <div class="glance__ph" aria-hidden="true">📸 Add your photo</div>
+        <div class="glance__lbl"><span>Tools of the trade</span></div>
+      </div>
+      <div class="glance__card glance__card--h4" role="img" aria-label="MMU campus visit">
+        <!-- PHOTO: style="background-image:url('images/mmu.jpg')" -->
+        <div class="glance__ph" aria-hidden="true">📸 Add your photo</div>
+        <div class="glance__lbl"><span>Campus visits</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hair booking form -->
+  <section class="contact-hair" id="contact-hair">
+    <div class="container ch-inner">
+      <div class="ch-left reveal">
+        <p class="w-label">Book</p>
+        <h2 class="ch-h">Reserve your<br><em>session.</em></h2>
+        <p class="ch-sub">Send your request — Rokhaya confirms within 24 hours on WhatsApp.</p>
+        <div class="ch-facts">
+          <div class="ch-fact">
+            <span>📍</span><span>Melaka · near MMU</span>
+          </div>
+          <div class="ch-fact">
+            <span>🕐</span><span>7 days a week</span>
+          </div>
+          <div class="ch-fact">
+            <span>💳</span><span>DuitNow &amp; cash</span>
+          </div>
+          <div class="ch-fact">
+            <span>💬</span>
+            <a href="https://wa.me/601XXXXXXXXX" class="ch-wa" target="_blank" rel="noopener">WhatsApp directly</a>
           </div>
         </div>
-        <p class="how__foot">💳 DuitNow &amp; cash accepted</p>
       </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-     CONTACT / BOOKING FORM
-================================================================ -->
-<section class="contact" id="contact">
-  <div class="container contact__inner">
-
-    <div class="contact__left reveal">
-      <p class="col-tag">Book now</p>
-      <h2 class="contact__h">Let's make<br>it happen.</h2>
-      <p class="contact__sub">Fill in your details and Rokhaya will confirm within 24 hours — straight to your WhatsApp.</p>
-      <div class="contact__details">
-        <div class="contact__detail">
-          <span>📍</span><span>Melaka, Malaysia</span>
-        </div>
-        <div class="contact__detail">
-          <span>🕐</span><span>Available 7 days a week</span>
-        </div>
-        <div class="contact__detail">
-          <span>💬</span>
-          <!-- WHATSAPP NUMBER: replace +601XXXXXXXXX with your number -->
-          <a href="https://wa.me/601XXXXXXXXX" class="contact__wa" target="_blank" rel="noopener">Chat on WhatsApp directly</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="contact__right reveal reveal--delay">
-      <!-- FORM (no backend needed — submits to WhatsApp) -->
-      <form class="booking-form" id="bookingForm" novalidate>
-
-        <div class="form-group">
-          <label for="f-name">Your name <span aria-hidden="true">*</span></label>
-          <input type="text" id="f-name" name="name" placeholder="e.g. Aisha Rahman" required autocomplete="name">
-        </div>
-
-        <div class="form-group">
-          <label for="f-wa">WhatsApp number <span aria-hidden="true">*</span></label>
-          <input type="tel" id="f-wa" name="whatsapp" placeholder="e.g. +601X-XXXXXXX" required autocomplete="tel">
-        </div>
-
-        <div class="form-group">
-          <label for="f-service">Service <span aria-hidden="true">*</span></label>
-          <select id="f-service" name="service" required>
-            <option value="" disabled selected>Choose a service…</option>
-            <optgroup label="Hair Services">
+      <div class="ch-right reveal reveal--delay">
+        <form class="hair-form" id="hairForm" novalidate>
+          <div class="fg">
+            <label for="hf-name">Name <span>*</span></label>
+            <input type="text" id="hf-name" name="name" placeholder="Your name" required autocomplete="name">
+          </div>
+          <div class="fg">
+            <label for="hf-wa">WhatsApp <span>*</span></label>
+            <input type="tel" id="hf-wa" name="wa" placeholder="+601X-XXXXXXX" required autocomplete="tel">
+          </div>
+          <div class="fg">
+            <label for="hf-svc">Service <span>*</span></label>
+            <select id="hf-svc" name="service" required>
+              <option value="" disabled selected>Choose a service…</option>
               <option value="cornrows">Cornrows (from RM 45)</option>
               <option value="box-braids">Box Braids (from RM 90)</option>
               <option value="twists-locks">Twists &amp; Locks (from RM 70)</option>
               <option value="cut-blowdry">Cut &amp; Blow-dry (RM 35)</option>
               <option value="deep-treatment">Deep Treatment (RM 30)</option>
-            </optgroup>
-            <optgroup label="Crêpes">
-              <option value="group-crepe">Group crêpe order</option>
-            </optgroup>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="f-loc">Your location preference <span aria-hidden="true">*</span></label>
-          <select id="f-loc" name="location" required>
-            <option value="" disabled selected>Where / how?</option>
-            <option value="home-visit">Home visit (near MMU)</option>
-            <option value="mmu-campus">MMU campus</option>
-            <option value="her-place">I'll come to you (outside MMU zone)</option>
-            <option value="ixora">Crêpe delivery — Ixora</option>
-            <option value="ugreen">Crêpe delivery — University Green Apt</option>
-          </select>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="f-date">Preferred date</label>
-            <input type="date" id="f-date" name="date">
+            </select>
           </div>
-          <div class="form-group">
-            <label for="f-time">Preferred time</label>
-            <input type="time" id="f-time" name="time">
+          <div class="fg">
+            <label for="hf-loc">Location <span>*</span></label>
+            <select id="hf-loc" name="location" required>
+              <option value="" disabled selected>Where?</option>
+              <option value="home-visit">At my place (home visit)</option>
+              <option value="mmu-campus">MMU campus</option>
+              <option value="her-place">I'll come to you (outside zone)</option>
+            </select>
           </div>
+          <div class="fg-row">
+            <div class="fg">
+              <label for="hf-date">Date</label>
+              <input type="date" id="hf-date" name="date">
+            </div>
+            <div class="fg">
+              <label for="hf-time">Time</label>
+              <input type="time" id="hf-time" name="time">
+            </div>
+          </div>
+          <div class="fg">
+            <label for="hf-msg">Notes</label>
+            <textarea id="hf-msg" name="message" rows="2" placeholder="Hair length, style reference, any requests…"></textarea>
+          </div>
+          <button type="submit" class="btn btn--rose btn--full" id="hairFormBtn">Send booking request</button>
+          <p class="form-notice" id="hairFormNotice" aria-live="polite"></p>
+        </form>
+        <div class="form-success" id="hairFormSuccess" hidden>
+          <div class="form-success__icon">💅</div>
+          <h3>Booking sent!</h3>
+          <p>Rokhaya will confirm your appointment within 24 hours. Tap to let her know on WhatsApp.</p>
+          <a id="hairWaBtn" href="https://wa.me/601XXXXXXXXX" class="btn btn--rose btn--full" target="_blank" rel="noopener">Confirm on WhatsApp ✓</a>
+          <button class="btn btn--outline btn--full" id="hairFormReset">New request</button>
         </div>
-
-        <div class="form-group">
-          <label for="f-msg">Details / requests</label>
-          <textarea id="f-msg" name="message" rows="3" placeholder="Hair length, style reference, crêpe quantity, dietary needs…"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn--gold btn--full" id="formBtn">
-          Send booking request
-        </button>
-        <p class="form-notice" id="formNotice" aria-live="polite"></p>
-      </form>
-
-      <!-- Success state — shown after submit -->
-      <div class="form-success" id="formSuccess" hidden>
-        <div class="form-success__icon">🎉</div>
-        <h3>Request received!</h3>
-        <p>Rokhaya will confirm your booking within 24 hours. Tap below to send a quick message on WhatsApp.</p>
-        <!-- href updated dynamically by JS -->
-        <a id="formWaBtn" href="https://wa.me/601XXXXXXXXX" class="btn btn--gold btn--full" target="_blank" rel="noopener">
-          Confirm on WhatsApp ✓
-        </a>
-        <button class="btn btn--outline btn--full" id="formReset">Make another request</button>
       </div>
     </div>
+  </section>
 
+</div><!-- /world--hair -->
+
+<!-- ═══════════════════════════════════════════════════════════
+  ██╗    ██╗ ██████╗ ██████╗ ██╗     ██████╗     ██████╗
+  ██║    ██║██╔═══██╗██╔══██╗██║     ██╔══██╗    ╚════██╗
+  ██║ █╗ ██║██║   ██║██████╔╝██║     ██║  ██║     █████╔╝
+  ██║███╗██║██║   ██║██╔══██╗██║     ██║  ██║    ██╔═══╝
+  ╚███╔███╔╝╚██████╔╝██║  ██║███████╗██████╔╝    ███████╗
+   ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═════╝    ╚══════╝
+  WORLD II — CRÊPES (cosmic, anime, warm amber, alive)
+═══════════════════════════════════════════════════════════ -->
+<div class="world world--crepes" id="world-crepes">
+
+  <!-- Portal transition -->
+  <div class="world-portal" aria-hidden="true">
+    <div class="portal-rays"></div>
+    <div class="portal-badge">
+      <span>🌌</span>
+      <span>Entering Crêpe World</span>
+      <span>🌌</span>
+    </div>
+  </div>
+
+  <!-- Crêpes cosmic hero -->
+  <section class="crepes-hero">
+    <div class="crepes-hero__bg" aria-hidden="true">
+      <div class="stars-layer" id="crepeStars"></div>
+      <div class="rays-layer"  aria-hidden="true"></div>
+    </div>
+    <div class="container crepes-hero__inner">
+      <div class="crepes-hero__text">
+        <p class="c-label">World II · Crêpes</p>
+        <h2 class="crepes-hero__h">
+          Made<br>from<br><em>scratch.</em>
+        </h2>
+        <p class="crepes-hero__sub">Four flavours. Made to order. Delivered to Ixora &amp; University Green, or collected during your hair session.</p>
+        <div class="crepes-hero__actions">
+          <a href="#crepe-menu" class="btn btn--gold">See the menu</a>
+          <a href="#contact-crepes" class="btn btn--ghost-gold">Order now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ANIME PRODUCTION STAGE ═══════════════════════════ -->
+  <section class="stage-section" id="stage-section">
+    <div class="stage-wrap">
+      <div class="stage-head">
+        <p class="c-label">How it's made</p>
+        <h2 class="stage-h">The recipe,<br><em>animated.</em></h2>
+      </div>
+
+      <div class="stage" id="stage">
+        <!-- Cosmic background -->
+        <div class="stage-bg" aria-hidden="true">
+          <div class="stage-stars-layer" id="stageStarLayer"></div>
+          <div class="stage-rays-bg" aria-hidden="true"></div>
+        </div>
+
+        <!-- Phase label (JS-controlled) -->
+        <div class="phase-lbl" id="phaseLbl" aria-live="assertive" aria-atomic="true"></div>
+
+        <!-- ─── FLOUR BAG ─── -->
+        <div class="ing ing--flour" id="ingFlour" aria-hidden="true">
+          <div class="flour-bag">
+            <div class="flour-bag__top"></div>
+            <div class="flour-bag__body"><em>Farine</em></div>
+            <div class="flour-bag__base"></div>
+          </div>
+          <div class="flour-pour-wrap" id="flourPour">
+            <div class="flour-drop"></div>
+            <div class="flour-drop"></div>
+            <div class="flour-drop"></div>
+            <div class="flour-drop"></div>
+            <div class="flour-drop"></div>
+          </div>
+        </div>
+
+        <!-- ─── MILK CARTON ─── -->
+        <div class="ing ing--milk" id="ingMilk" aria-hidden="true">
+          <div class="milk-carton">
+            <div class="milk-carton__roof"></div>
+            <div class="milk-carton__body"><em>Lait</em></div>
+          </div>
+          <div class="milk-stream" id="milkStream"></div>
+        </div>
+
+        <!-- ─── THE CHICKEN ─── -->
+        <div class="chicken-wrap" id="chickenWrap" aria-label="Chicken flying across" aria-hidden="true">
+          <!-- The CSS chicken character -->
+          <div class="chick" id="chick">
+            <div class="chick-body">
+              <div class="chick-belly"></div>
+              <div class="chick-wing chick-wing--l"></div>
+              <div class="chick-wing chick-wing--r"></div>
+            </div>
+            <div class="chick-head">
+              <div class="chick-comb">
+                <div></div><div></div><div></div>
+              </div>
+              <div class="chick-eye chick-eye--l" id="eyeL"></div>
+              <div class="chick-eye chick-eye--r" id="eyeR"></div>
+              <div class="chick-beak"></div>
+              <div class="chick-wink" id="chickWink"></div>
+            </div>
+            <div class="chick-legs" aria-hidden="true">
+              <div class="chick-leg">
+                <div class="chick-foot"></div>
+              </div>
+              <div class="chick-leg">
+                <div class="chick-foot"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Speech bubble / action bubble -->
+          <div class="chick-bubble" id="chickBubble"></div>
+          <!-- The egg -->
+          <div class="egg-drop" id="eggDrop">
+            <div class="egg-shell">
+              <div class="egg-top"></div>
+              <div class="egg-bottom"></div>
+            </div>
+            <div class="egg-yolk" id="eggYolk"></div>
+          </div>
+        </div>
+
+        <!-- ─── MIXING BOWL ─── -->
+        <div class="ing ing--bowl" id="ingBowl" aria-hidden="true">
+          <div class="bowl">
+            <div class="bowl-rim"></div>
+            <div class="bowl-body">
+              <div class="batter" id="batter">
+                <div class="batter-swirl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── PAN + CRÊPE ─── -->
+        <div class="ing ing--pan" id="ingPan" aria-hidden="true">
+          <div class="pan">
+            <div class="pan-handle"></div>
+            <div class="pan-disk">
+              <div class="pan-crepe" id="panCrepe">
+                <div class="crepe-surface">
+                  <div class="crepe-hole"></div>
+                  <div class="crepe-hole"></div>
+                  <div class="crepe-hole"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Steam -->
+          <div class="pan-steam" id="panSteam" aria-hidden="true">
+            <div class="s-puff"></div>
+            <div class="s-puff"></div>
+            <div class="s-puff"></div>
+          </div>
+        </div>
+
+        <!-- ─── FINAL REVEAL ─── -->
+        <div class="final-reveal" id="finalReveal" aria-hidden="true">
+          <div class="reveal-crepe">
+            <div class="rc-body">
+              <div class="rc-hole"></div>
+              <div class="rc-hole"></div>
+            </div>
+          </div>
+          <div class="sparkle-ring" id="sparkleRing">
+            <div class="sparkle"></div><div class="sparkle"></div>
+            <div class="sparkle"></div><div class="sparkle"></div>
+            <div class="sparkle"></div><div class="sparkle"></div>
+            <div class="sparkle"></div><div class="sparkle"></div>
+          </div>
+          <p class="ready-text" id="readyText"></p>
+        </div>
+
+        <!-- Impact burst container -->
+        <div class="impacts" id="impacts" aria-hidden="true"></div>
+
+        <!-- Stage controls -->
+        <div class="stage-controls" id="stageControls">
+          <button class="stage-btn" id="stagePlay">
+            <span>▶</span> Watch it being made
+          </button>
+          <button class="stage-btn stage-btn--replay" id="stageReplay" hidden>
+            <span>↺</span> Replay
+          </button>
+        </div>
+      </div><!-- /stage -->
+    </div>
+  </section><!-- /stage-section -->
+
+  <!-- ═══ CRÊPE MENU ════════════════════════════════════════ -->
+  <section class="crepe-menu" id="crepe-menu">
+    <div class="container">
+      <div class="cm-head reveal">
+        <p class="c-label">The menu</p>
+        <h2 class="cm-h">4 flavours.<br>0 compromise.</h2>
+        <div class="cm-delivery-rule">
+          <span>🛵</span>
+          <p><strong>Group delivery:</strong> Ixora &amp; University Green only. Elsewhere: pick up at your hair appointment.</p>
+        </div>
+      </div>
+
+      <div class="crepe-cards reveal" id="crepeCardsGrid">
+
+        <div class="cc" data-crepe="butter-sugar" tabindex="0" role="button" aria-label="Butter & Sugar — tap to see photos">
+          <div class="cc__thumb cc__thumb--bs" aria-hidden="true">
+            <div class="cc__thumb-shine"></div>
+          </div>
+          <div class="cc__body">
+            <div class="cc__top">
+              <h3>Butter &amp; Sugar</h3>
+              <span class="c-price">RM 6</span>
+            </div>
+            <p>The timeless classic. Warm, buttery, golden-sweet.</p>
+            <span class="cc__peek">👁 See photos &amp; order</span>
+          </div>
+        </div>
+
+        <div class="cc" data-crepe="nutella-banana" tabindex="0" role="button" aria-label="Nutella & Banana — tap to see photos">
+          <div class="cc__thumb cc__thumb--nb" aria-hidden="true">
+            <div class="cc__thumb-shine"></div>
+          </div>
+          <div class="cc__body">
+            <div class="cc__top">
+              <h3>Nutella &amp; Banana</h3>
+              <span class="c-price">RM 9</span>
+            </div>
+            <p>Generous Nutella, fresh banana, warm fold. Indulgent.</p>
+            <span class="cc__peek">👁 See photos &amp; order</span>
+          </div>
+        </div>
+
+        <div class="cc" data-crepe="ham-cheese" tabindex="0" role="button" aria-label="Ham & Cheese — tap to see photos">
+          <div class="cc__thumb cc__thumb--hc" aria-hidden="true">
+            <div class="cc__thumb-shine"></div>
+          </div>
+          <div class="cc__body">
+            <div class="cc__top">
+              <h3>Ham &amp; Cheese</h3>
+              <span class="c-price">RM 11</span>
+            </div>
+            <p>Smoked ham, melted cheese. The savoury essential.</p>
+            <span class="cc__peek">👁 See photos &amp; order</span>
+          </div>
+        </div>
+
+        <div class="cc" data-crepe="spicy-chicken" tabindex="0" role="button" aria-label="Spicy Chicken & Cheese — tap to see photos">
+          <div class="cc__thumb cc__thumb--sc" aria-hidden="true">
+            <div class="cc__thumb-shine"></div>
+          </div>
+          <div class="cc__body">
+            <div class="cc__top">
+              <h3>Spicy Chicken &amp; Cheese</h3>
+              <span class="c-price">RM 12</span>
+            </div>
+            <p>Spiced chicken, melted cheese, kick of heat. Bestseller.</p>
+            <span class="cc__peek">👁 See photos &amp; order</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CRÊPE ORDERING SPACE ═════════════════════════════ -->
+  <section class="contact-crepes" id="contact-crepes">
+    <div class="cc-order__bg" aria-hidden="true">
+      <div class="cc-order__stars" id="orderStars"></div>
+    </div>
+    <div class="container cc-order__inner">
+      <div class="cc-order__left reveal">
+        <p class="c-label">Order</p>
+        <h2 class="cc-order__h">
+          Your crêpe<br>is <em>waiting.</em>
+        </h2>
+        <p class="cc-order__sub">Fill in your details and we'll confirm your order. Delivery to Ixora and University Green (group orders). Elsewhere: pick up.</p>
+        <div class="cc-rules">
+          <div class="cc-rule cc-rule--yes">
+            <span>✅</span>
+            <div>
+              <strong>Delivery</strong>
+              <span>Ixora · University Green Apt</span>
+            </div>
+          </div>
+          <div class="cc-rule cc-rule--no">
+            <span>🤝</span>
+            <div>
+              <strong>Pick up</strong>
+              <span>All other locations</span>
+            </div>
+          </div>
+        </div>
+        <!-- Floating crêpe deco -->
+        <div class="cc-deco" aria-hidden="true">
+          <div class="cc-deco__crepe"></div>
+          <div class="cc-deco__steam"><div></div><div></div></div>
+        </div>
+      </div>
+      <div class="cc-order__right reveal reveal--delay">
+        <div class="crepe-form-wrap">
+          <form class="crepe-form" id="crepeForm" novalidate>
+            <div class="fg">
+              <label for="cf-name">Name <span>*</span></label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" required autocomplete="name">
+            </div>
+            <div class="fg">
+              <label for="cf-wa">WhatsApp <span>*</span></label>
+              <input type="tel" id="cf-wa" name="wa" placeholder="+601X-XXXXXXX" required autocomplete="tel">
+            </div>
+            <div class="fg">
+              <label for="cf-flavour">Flavour <span>*</span></label>
+              <select id="cf-flavour" name="flavour" required>
+                <option value="" disabled selected>Choose your crêpe…</option>
+                <option value="butter-sugar">Butter &amp; Sugar — RM 6</option>
+                <option value="nutella-banana">Nutella &amp; Banana — RM 9</option>
+                <option value="ham-cheese">Ham &amp; Cheese — RM 11</option>
+                <option value="spicy-chicken">Spicy Chicken &amp; Cheese — RM 12</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="cf-qty">Quantity <span>*</span></label>
+              <select id="cf-qty" name="qty" required>
+                <option value="2">2 crêpes</option>
+                <option value="3">3 crêpes</option>
+                <option value="4">4 crêpes</option>
+                <option value="5">5 crêpes</option>
+                <option value="6+">6+ crêpes</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="cf-delivery">Delivery <span>*</span></label>
+              <select id="cf-delivery" name="delivery" required>
+                <option value="" disabled selected>Where?</option>
+                <option value="ixora">Delivery — Ixora</option>
+                <option value="ugreen">Delivery — University Green Apt</option>
+                <option value="pickup">Pick up (with hair appointment)</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="cf-msg">Notes</label>
+              <textarea id="cf-msg" name="message" rows="2" placeholder="Spice level, dietary needs, special requests…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--gold btn--full" id="crepeFormBtn">
+              🍽 Place my order
+            </button>
+            <p class="form-notice" id="crepeFormNotice" aria-live="polite"></p>
+          </form>
+          <div class="form-success form-success--crepe" id="crepeFormSuccess" hidden>
+            <div class="form-success__icon">🎉</div>
+            <h3>Order received!</h3>
+            <p>Your crêpes are on their way to being made. Confirm on WhatsApp to lock it in.</p>
+            <a id="crepeWaBtn" href="https://wa.me/601XXXXXXXXX" class="btn btn--gold btn--full" target="_blank" rel="noopener">Confirm on WhatsApp 🍽</a>
+            <button class="btn btn--ghost-gold btn--full" id="crepeFormReset">New order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /world--crepes -->
+
+<!-- ═══════════════════════════════════════════════════════════
+     SHARED — Story + How it works + Testimonial
+═══════════════════════════════════════════════════════════ -->
+
+<!-- Story -->
+<section class="story" id="story">
+  <div class="container story__inner">
+    <div class="story__text reveal">
+      <p class="s-label">Our story</p>
+      <h2 class="story__h">Two crafts.<br>One woman.<br><em>Zero fixed address.</em></h2>
+      <p>Rokhaya brings two passions into one enterprise at the heart of the MMU Melaka community. She braids hair with patience and precision — and flips crêpes with the same dedication. The name? A riff on the French word <em>crêpé</em> — meaning both "crinkled" (your natural texture) and, of course, crêpe.</p>
+      <p>No salon walls. No fixed kitchen. Just real skill, real flavours, and real confidence — delivered wherever you are.</p>
+    </div>
+    <div class="story__stats reveal reveal--delay">
+      <div class="story__stat"><span class="sn">2</span><span class="sl">crafts</span></div>
+      <div class="story__stat"><span class="sn">0</span><span class="sl">fixed address</span></div>
+      <div class="story__stat"><span class="sn">7/7</span><span class="sl">days a week</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial -->
+<section class="testi">
+  <div class="container">
+    <div class="testi__card reveal">
+      <div class="testi__qm" aria-hidden="true">"</div>
+      <blockquote>I wanted box braids done at my dorm and Rokhaya came with everything she needed. Best braiding in Melaka — and she surprised me with a crêpe at the end. That honestly made my whole week. Will 100% book again.</blockquote>
+      <cite><strong>Farah N.</strong><span>MMU Melaka student</span></cite>
+      <div class="testi__stars" aria-label="5 stars">★★★★★</div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="how" id="how-it-works">
+  <div class="container">
+    <div class="section-hd section-hd--c reveal">
+      <p class="s-label s-label--light">How it works</p>
+      <h2 class="how__h">Simple by design</h2>
+      <p class="how__sub">No salon unless you have to. Here's the deal.</p>
+    </div>
+    <div class="how__grid">
+      <div class="how__card reveal">
+        <div class="how__icon">✂️</div>
+        <h3>Hair appointments</h3>
+        <div class="how__scen">
+          <div class="how__tag">Near MMU (~5 km)</div>
+          <p>She comes to <strong>your place.</strong> You stay put, she brings everything.</p>
+        </div>
+        <div class="how__scen how__scen--alt">
+          <div class="how__tag how__tag--alt">Outside that zone</div>
+          <p>You come to <strong>her.</strong> Confirm address via WhatsApp.</p>
+        </div>
+        <p class="how__foot">📲 Confirmed within 24h</p>
+      </div>
+      <div class="how__card reveal reveal--delay">
+        <div class="how__icon">🍽️</div>
+        <h3>Crêpe orders</h3>
+        <div class="how__zones">
+          <div class="how__zone how__zone--yes">
+            <p class="hz-lbl">🛵 Delivery</p>
+            <ul><li><strong>Ixora</strong></li><li><strong>University Green Apt</strong></li></ul>
+            <p class="hz-note">Group orders only</p>
+          </div>
+          <div class="how__zone how__zone--pick">
+            <p class="hz-lbl">🤝 Pick up</p>
+            <p>Collect with your hair session — or by arrangement.</p>
+          </div>
+        </div>
+        <p class="how__foot">💳 DuitNow &amp; cash</p>
+      </div>
+    </div>
   </div>
 </section>
 
 </main>
 
-<!-- ================================================================
+<!-- ═══════════════════════════════════════════════════════════
      FOOTER
-     LOGO: replace .logo-placeholder with your <img>
-================================================================ -->
+═══════════════════════════════════════════════════════════ -->
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
       <div class="logo-frame logo-frame--sm">
-        <div class="logo-placeholder logo-placeholder--sm" aria-hidden="true">
-          <span>MR</span>
-        </div>
+        <div class="logo-ph logo-ph--sm" aria-hidden="true"><span>MR</span></div>
       </div>
       <div>
         <p class="footer__name">Maison Rokhaya</p>
@@ -511,52 +756,44 @@
     </div>
     <p class="footer__tagline"><em>Beauty. Confidence. You.</em></p>
     <p class="footer__loc">Melaka, Malaysia · Home visits, MMU campus, or by appointment</p>
-    <nav class="footer__nav" aria-label="Footer navigation">
-      <a href="#menu">Hair</a>
-      <a href="#menu-crepes">Crêpes</a>
+    <nav class="footer__nav" aria-label="Footer">
+      <a href="#world-hair">Hair</a>
+      <a href="#world-crepes">Crêpes</a>
       <a href="#story">Story</a>
-      <a href="#how-it-works">Service Area</a>
-      <a href="#contact">Book</a>
+      <a href="#how-it-works">Area</a>
+      <a href="#contact-hair">Book Hair</a>
+      <a href="#contact-crepes">Order Crêpes</a>
     </nav>
     <p class="footer__copy">&copy; 2024 Maison Rokhaya. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- ================================================================
+<!-- ═══════════════════════════════════════════════════════════
      CRÊPE PHOTO MODAL
-     Data lives in script.js — see CREPE_DATA array
-     Add real photo paths to the `images` array for each crêpe
-================================================================ -->
+     Edit CREPE_DATA in script.js to add real photo URLs
+═══════════════════════════════════════════════════════════ -->
 <div class="modal" id="crepeModal" role="dialog" aria-modal="true" aria-labelledby="modalName" hidden>
   <div class="modal__overlay" id="modalOverlay" aria-hidden="true"></div>
   <div class="modal__panel">
     <button class="modal__close" id="modalClose" aria-label="Close">✕</button>
-    <!-- Carousel -->
-    <div class="modal__carousel" id="modalCarousel">
+    <div class="modal__carousel">
       <div class="modal__slides" id="modalSlides" aria-live="polite"></div>
-      <button class="modal__arrow modal__arrow--l" id="modalPrev" aria-label="Previous photo">‹</button>
-      <button class="modal__arrow modal__arrow--r" id="modalNext" aria-label="Next photo">›</button>
-      <div class="modal__dots" id="modalDots" role="tablist" aria-label="Slide navigation"></div>
+      <button class="modal__arrow modal__arrow--l" id="modalPrev" aria-label="Previous">‹</button>
+      <button class="modal__arrow modal__arrow--r" id="modalNext" aria-label="Next">›</button>
+      <div class="modal__dots" id="modalDots" role="tablist"></div>
     </div>
-    <!-- Info -->
     <div class="modal__info">
       <div class="modal__info-top">
-        <div>
-          <h3 class="modal__name" id="modalName"></h3>
-          <p class="modal__desc" id="modalDesc"></p>
-        </div>
+        <div><h3 class="modal__name" id="modalName"></h3><p class="modal__desc" id="modalDesc"></p></div>
         <span class="modal__price" id="modalPrice"></span>
       </div>
-      <button class="btn btn--gold btn--full modal__order" id="modalOrder">Order this →</button>
+      <button class="btn btn--gold btn--full modal__order" id="modalOrder">🍽 Order this crêpe →</button>
     </div>
   </div>
 </div>
 
-<!-- ================================================================
-     FLOATING WHATSAPP BUTTON
-     WHATSAPP NUMBER: replace +601XXXXXXXXX with your number
-================================================================ -->
-<a class="fab-wa" href="https://wa.me/601XXXXXXXXX" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<!-- WhatsApp FAB (replace number) -->
+<a class="fab-wa" href="https://wa.me/601XXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
