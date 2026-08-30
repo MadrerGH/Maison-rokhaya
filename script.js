@@ -5,7 +5,8 @@
    2. Add real photo URLs to `images` arrays in CREPE_DATA
 ================================================================ */
 
-const WHATSAPP_NUMBER = '601XXXXXXXXX';
+const WHATSAPP_NUMBER = '60116553601';   // Malaysia (primary)
+const WHATSAPP_FR     = '33746355930';  // France
 
 const CREPE_DATA = [
   {
@@ -514,7 +515,7 @@ hairForm && hairForm.addEventListener('submit', e => {
     data.time ? `Time: ${data.time}` : '',
     data.message ? `Notes: ${data.message}` : '',
     ``,
-    `— Hair booking via maisonrokhaya.com`
+    `— Hair booking via maisonr9.com`
   ].filter(Boolean).join('\n');
 
   const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
@@ -586,7 +587,7 @@ crepeForm && crepeForm.addEventListener('submit', e => {
     data.delivery ? `Delivery: ${data.delivery}` : '',
     data.message ? `Notes: ${data.message}` : '',
     ``,
-    `— Crêpe order via maisonrokhaya.com`
+    `— Crêpe order via maisonr9.com`
   ].filter(Boolean).join('\n');
 
   const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
@@ -605,8 +606,14 @@ crepeFormReset && crepeFormReset.addEventListener('click', () => {
 });
 
 /* ── Update all WhatsApp hrefs ───────────────────────────────── */
-$$('.fab-wa, .ch-wa, #hairWaBtn, #crepeWaBtn').forEach(el => {
-  if (el.href && el.href.includes('601XXXXXXXXX')) {
-    el.href = el.href.replace('601XXXXXXXXX', WHATSAPP_NUMBER);
+$$('.fab-wa, .ch-wa, #hairWaBtn, #crepeWaBtn, [data-wa-my], [data-wa-fr]').forEach(el => {
+  const isFr = el.dataset.waFr !== undefined;
+  const num  = isFr ? WHATSAPP_FR : WHATSAPP_NUMBER;
+  if (el.href) {
+    el.href = el.href
+      .replace('601XXXXXXXXX', WHATSAPP_NUMBER)
+      .replace('33XXXXXXXXX', WHATSAPP_FR);
   }
+  if (el.dataset.waMy !== undefined) el.href = `https://wa.me/${WHATSAPP_NUMBER}`;
+  if (el.dataset.waFr !== undefined) el.href = `https://wa.me/${WHATSAPP_FR}`;
 });
