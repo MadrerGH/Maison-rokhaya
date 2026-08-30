@@ -1,386 +1,567 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maison Rokhaya</title>
-  <meta name="description" content="Maison Rokhaya — Restaurant gastronomique d'Afrique de l'Ouest à Paris. Saveurs authentiques du Sénégal et de la région, servies avec élégance.">
+  <title>Maison Rokhaya — Beauty & Crêpes · Melaka</title>
+  <meta name="description" content="Hair braiding & handmade crêpes in Melaka. Home visits, MMU campus. Available 7 days/week. Book via WhatsApp.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,600;1,9..144,700&family=Archivo:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#accueil" class="nav__logo">
-        <span class="nav__logo-main">Maison</span>
-        <span class="nav__logo-sub">Rokhaya</span>
-      </a>
-      <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav__links" id="navLinks" role="list">
-        <li><a href="#histoire">Notre Histoire</a></li>
-        <li><a href="#carte">La Carte</a></li>
-        <li><a href="#experience">L'Expérience</a></li>
-        <li><a href="#galerie">Galerie</a></li>
-        <li><a href="#contact" class="nav__cta">Réserver</a></li>
-      </ul>
-    </div>
-  </nav>
+<!-- ================================================================
+     NAV — sticky header
+     LOGO: replace .logo-placeholder with <img src="logo.png" alt="Maison Rokhaya" class="nav__logo-img">
+================================================================ -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#" class="nav__brand">
+      <div class="logo-frame">
+        <!-- LOGO PLACEHOLDER — swap with your actual logo image -->
+        <div class="logo-placeholder" aria-hidden="true">
+          <span>MR</span>
+        </div>
+      </div>
+      <div class="nav__brand-text">
+        <span class="nav__brand-name">Maison Rokhaya</span>
+        <span class="nav__brand-sub">Beauty &amp; Crêpes</span>
+      </div>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks" role="list">
+      <li><a href="#menu">Hair</a></li>
+      <li><a href="#menu-crepes">Crêpes</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#how-it-works">Service Area</a></li>
+      <li><a href="#contact" class="btn btn--gold btn--sm">Book Now</a></li>
+    </ul>
+  </div>
+</header>
 
-  <!-- Héro -->
-  <section class="hero" id="accueil">
-    <div class="hero__pattern" aria-hidden="true"></div>
+<main>
+
+<!-- ================================================================
+     HERO
+================================================================ -->
+<section class="hero" id="hero">
+  <div class="hero__texture" aria-hidden="true"></div>
+  <div class="container hero__inner">
     <div class="hero__content">
-      <p class="hero__eyebrow">Restaurant Gastronomique · Paris</p>
-      <h1 class="hero__title">L'Art de la<br><em>Table Africaine</em></h1>
-      <p class="hero__subtitle">Des saveurs authentiques d'Afrique de l'Ouest, servies avec l'élégance et la chaleur d'une maison parisienne.</p>
+      <p class="hero__eyebrow">Melaka, Malaysia · Home visits &amp; MMU campus</p>
+      <h1 class="hero__title">
+        <em>Crêpé —</em><br>
+        braided,<br>
+        folded &amp;<br>
+        beautiful.
+      </h1>
+      <p class="hero__sub">Hair artistry &amp; handmade crêpes, wherever you are in Melaka. No salon, no fixed kitchen — just real skill at your door.</p>
       <div class="hero__actions">
-        <a href="#carte" class="btn btn--primary">Découvrir la Carte</a>
-        <a href="#contact" class="btn btn--ghost">Réserver une Table</a>
+        <a href="#contact" class="btn btn--gold">Book an appointment</a>
+        <a href="#menu-crepes" class="btn btn--ghost">See the crêpe menu</a>
+      </div>
+      <p class="hero__trust">
+        <span>✓ Reply within 24h</span>
+        <span>✓ DuitNow &amp; cash</span>
+        <span>✓ 7 days a week</span>
+      </p>
+    </div>
+    <div class="hero__visual" aria-hidden="true">
+      <!-- CSS-drawn floating crêpe illustration -->
+      <div class="crepe-illus">
+        <div class="crepe-illus__body"></div>
+        <div class="crepe-illus__shine"></div>
+        <div class="crepe-illus__steam crepe-illus__steam--a"></div>
+        <div class="crepe-illus__steam crepe-illus__steam--b"></div>
+        <div class="crepe-illus__steam crepe-illus__steam--c"></div>
+      </div>
+      <div class="hero__badge">
+        <span class="hero__badge-num">4</span>
+        <span class="hero__badge-lbl">crêpe flavours</span>
       </div>
     </div>
-    <div class="hero__scroll" aria-hidden="true">
-      <span>Défiler</span>
-      <div class="hero__scroll-line"></div>
-    </div>
-  </section>
+  </div>
+  <a href="#marquee" class="hero__scroll-hint" aria-label="Scroll down">
+    <span class="hero__scroll-dot"></span>
+  </a>
+</section>
 
-  <!-- Notre Histoire -->
-  <section class="section histoire" id="histoire">
-    <div class="container">
-      <div class="histoire__grid">
-        <div class="histoire__media reveal">
-          <div class="histoire__frame">
-            <div class="histoire__frame-fill"></div>
-            <div class="histoire__frame-border"></div>
-            <div class="histoire__frame-badge">
-              <span class="histoire__frame-badge-text">Depuis 2009</span>
+<!-- ================================================================
+     MARQUEE TICKER
+================================================================ -->
+<div class="marquee" id="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Cornrows</span><b>✦</b>
+    <span>Box Braids</span><b>✦</b>
+    <span>Twists &amp; Locks</span><b>✦</b>
+    <span>Cut &amp; Blow-dry</span><b>✦</b>
+    <span>Deep Treatment</span><b>✦</b>
+    <span>Butter &amp; Sugar</span><b>✦</b>
+    <span>Nutella &amp; Banana</span><b>✦</b>
+    <span>Ham &amp; Cheese</span><b>✦</b>
+    <span>Spicy Chicken &amp; Cheese</span><b>✦</b>
+    <span>Home Visits</span><b>✦</b>
+    <span>MMU Campus</span><b>✦</b>
+    <span>7 Days a Week</span><b>✦</b>
+    <!-- duplicate for seamless loop -->
+    <span>Cornrows</span><b>✦</b>
+    <span>Box Braids</span><b>✦</b>
+    <span>Twists &amp; Locks</span><b>✦</b>
+    <span>Cut &amp; Blow-dry</span><b>✦</b>
+    <span>Deep Treatment</span><b>✦</b>
+    <span>Butter &amp; Sugar</span><b>✦</b>
+    <span>Nutella &amp; Banana</span><b>✦</b>
+    <span>Ham &amp; Cheese</span><b>✦</b>
+    <span>Spicy Chicken &amp; Cheese</span><b>✦</b>
+    <span>Home Visits</span><b>✦</b>
+    <span>MMU Campus</span><b>✦</b>
+    <span>7 Days a Week</span><b>✦</b>
+  </div>
+</div>
+
+<!-- ================================================================
+     MENU — two columns: hair + crêpes
+================================================================ -->
+<section class="menu" id="menu">
+  <div class="menu__cols">
+
+    <!-- Hair column -->
+    <div class="menu__col menu__col--hair">
+      <div class="menu__col-pad">
+        <p class="col-tag">Hair services</p>
+        <h2 class="menu__col-h">Your hair,<br>your story.</h2>
+        <p class="menu__col-note">All prices from · home visits available near MMU</p>
+        <ul class="service-list" role="list">
+
+          <li class="service-item">
+            <div class="service-item__info">
+              <h3>Cornrows</h3>
+              <p>Classic, clean, protective. From simple lines to intricate patterns.</p>
             </div>
+            <span class="price">from RM 45</span>
+          </li>
+
+          <li class="service-item">
+            <div class="service-item__info">
+              <h3>Box Braids</h3>
+              <p>Individual braids, any length. Extensions available for fuller volume.</p>
+            </div>
+            <span class="price">from RM 90</span>
+          </li>
+
+          <li class="service-item">
+            <div class="service-item__info">
+              <h3>Twists &amp; Locks</h3>
+              <p>Two-strand twists, Senegalese twists, starter locs — all textures welcome.</p>
+            </div>
+            <span class="price">from RM 70</span>
+          </li>
+
+          <li class="service-item">
+            <div class="service-item__info">
+              <h3>Cut &amp; Blow-dry</h3>
+              <p>Precision cut with a professional blow-out and finish.</p>
+            </div>
+            <span class="price">RM 35</span>
+          </li>
+
+          <li class="service-item">
+            <div class="service-item__info">
+              <h3>Deep Treatment</h3>
+              <p>Intense moisture and protein mask. The reset your scalp deserves.</p>
+            </div>
+            <span class="price">RM 30</span>
+          </li>
+
+        </ul>
+        <a href="#contact" class="btn btn--rose menu__col-cta">Book a hair session</a>
+      </div>
+    </div>
+
+    <!-- Crêpes column -->
+    <div class="menu__col menu__col--crepes" id="menu-crepes">
+      <div class="menu__col-pad">
+        <p class="col-tag col-tag--light">Crêpes</p>
+        <h2 class="menu__col-h menu__col-h--light">Warm, folded,<br>irresistible.</h2>
+
+        <div class="delivery-note">
+          <span class="delivery-note__icon">🛵</span>
+          <p><strong>Group delivery:</strong> Ixora &amp; University Green Apartment only. Elsewhere: pick up with your hair appointment.</p>
+        </div>
+
+        <!-- !! CREPE CARDS — click opens photo modal -->
+        <ul class="crepe-list" role="list">
+
+          <li class="crepe-card" data-crepe="butter-sugar" tabindex="0" role="button" aria-label="View Butter & Sugar crêpe photos">
+            <div class="crepe-card__thumb crepe-card__thumb--bs" aria-hidden="true"></div>
+            <div class="crepe-card__body">
+              <div class="crepe-card__top">
+                <h3>Butter &amp; Sugar</h3>
+                <span class="price price--light">RM 6</span>
+              </div>
+              <p>The timeless classic. Warm crêpe, real butter, golden sugar.</p>
+              <span class="crepe-card__peek">👁 See photos</span>
+            </div>
+          </li>
+
+          <li class="crepe-card" data-crepe="nutella-banana" tabindex="0" role="button" aria-label="View Nutella & Banana crêpe photos">
+            <div class="crepe-card__thumb crepe-card__thumb--nb" aria-hidden="true"></div>
+            <div class="crepe-card__body">
+              <div class="crepe-card__top">
+                <h3>Nutella &amp; Banana</h3>
+                <span class="price price--light">RM 9</span>
+              </div>
+              <p>Generous Nutella, fresh banana slices. Rich and indulgent.</p>
+              <span class="crepe-card__peek">👁 See photos</span>
+            </div>
+          </li>
+
+          <li class="crepe-card" data-crepe="ham-cheese" tabindex="0" role="button" aria-label="View Ham & Cheese crêpe photos">
+            <div class="crepe-card__thumb crepe-card__thumb--hc" aria-hidden="true"></div>
+            <div class="crepe-card__body">
+              <div class="crepe-card__top">
+                <h3>Ham &amp; Cheese</h3>
+                <span class="price price--light">RM 11</span>
+              </div>
+              <p>Smoked ham, melted cheese, wrapped in a soft golden crêpe.</p>
+              <span class="crepe-card__peek">👁 See photos</span>
+            </div>
+          </li>
+
+          <li class="crepe-card" data-crepe="spicy-chicken" tabindex="0" role="button" aria-label="View Spicy Chicken & Cheese crêpe photos">
+            <div class="crepe-card__thumb crepe-card__thumb--sc" aria-hidden="true"></div>
+            <div class="crepe-card__body">
+              <div class="crepe-card__top">
+                <h3>Spicy Chicken &amp; Cheese</h3>
+                <span class="price price--light">RM 12</span>
+              </div>
+              <p>Juicy spiced chicken, melted cheese. Our bestseller.</p>
+              <span class="crepe-card__peek">👁 See photos</span>
+            </div>
+          </li>
+
+        </ul>
+        <a href="#contact" class="btn btn--gold menu__col-cta" data-prefill="group-crepe">Order crêpes</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================================================================
+     AT A GLANCE — 4 photo cards
+     PHOTOS: Add background-image to each .glance-card in style.css
+     or inline: style="background-image:url('images/your-photo.jpg')"
+================================================================ -->
+<section class="glance" aria-label="Visual glimpse">
+  <div class="glance__grid">
+
+    <div class="glance__card glance__card--1" role="img" aria-label="Hair braiding station">
+      <!-- PHOTO: add background-image: url('images/braiding.jpg') -->
+      <div class="glance__hint" aria-hidden="true">📸 Your photo here</div>
+      <div class="glance__label"><span>Braiding station</span></div>
+    </div>
+
+    <div class="glance__card glance__card--2" role="img" aria-label="Crêpe griddle in action">
+      <!-- PHOTO: add background-image: url('images/crepe-griddle.jpg') -->
+      <div class="glance__hint" aria-hidden="true">📸 Your photo here</div>
+      <div class="glance__label"><span>Fresh crêpes</span></div>
+    </div>
+
+    <div class="glance__card glance__card--3" role="img" aria-label="Client waiting corner">
+      <!-- PHOTO: add background-image: url('images/corner.jpg') -->
+      <div class="glance__hint" aria-hidden="true">📸 Your photo here</div>
+      <div class="glance__label"><span>Waiting corner</span></div>
+    </div>
+
+    <div class="glance__card glance__card--4" role="img" aria-label="MMU campus stop">
+      <!-- PHOTO: add background-image: url('images/mmu.jpg') -->
+      <div class="glance__hint" aria-hidden="true">📸 Your photo here</div>
+      <div class="glance__label"><span>MMU campus</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================================================================
+     STORY
+================================================================ -->
+<section class="story" id="story">
+  <div class="container story__inner">
+    <div class="story__text reveal">
+      <p class="col-tag col-tag--gold">Our story</p>
+      <h2 class="story__h">Two crafts.<br>One woman.<br><em>Zero fixed address.</em></h2>
+      <p>Rokhaya brings two passions into one micro-enterprise, rooted in the MMU Melaka community. She braids hair with patience and precision — and flips crêpes with the same dedication. The name? A little twist on the French word <em>crêpé</em>, which means both "crinkled" (as in your natural texture) and, of course, crêpe.</p>
+      <p>No salon walls. No fixed kitchen. Just real skill, real flavours, and real confidence — delivered to your door or your campus corner.</p>
+    </div>
+    <div class="story__stats reveal reveal--delay">
+      <div class="story__stat">
+        <span class="story__num">2</span>
+        <span class="story__lbl">crafts, one person</span>
+      </div>
+      <div class="story__stat">
+        <span class="story__num">0</span>
+        <span class="story__lbl">fixed address</span>
+      </div>
+      <div class="story__stat">
+        <span class="story__num">7/7</span>
+        <span class="story__lbl">days a week</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     TESTIMONIAL
+================================================================ -->
+<section class="testi">
+  <div class="container">
+    <div class="testi__card reveal">
+      <div class="testi__quote-mark" aria-hidden="true">"</div>
+      <blockquote class="testi__text">
+        I wanted box braids done at my dorm and Rokhaya came with everything she needed. Best braiding in Melaka — and she surprised me with a crêpe at the end. That honestly made my whole week. Will 100% book again.
+      </blockquote>
+      <cite class="testi__author">
+        <strong>Farah N.</strong>
+        <span>MMU Melaka student</span>
+      </cite>
+      <div class="testi__stars" aria-label="5 stars">★★★★★</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     HOW IT WORKS / SERVICE AREA
+================================================================ -->
+<section class="how" id="how-it-works">
+  <div class="container">
+    <div class="section-hd section-hd--center reveal">
+      <p class="col-tag col-tag--light">How it works</p>
+      <h2 class="how__h">Simple by design</h2>
+      <p class="how__sub">No salon to visit — unless you really have to. Here's how each service works.</p>
+    </div>
+    <div class="how__grid">
+
+      <div class="how__card reveal">
+        <div class="how__icon" aria-hidden="true">✂️</div>
+        <h3>Hair appointments</h3>
+        <div class="how__scenario">
+          <div class="how__tag">Near MMU (~5 km radius)</div>
+          <p>She comes to <strong>your place.</strong> Dorm, flat, or home — bring yourself, she brings everything else.</p>
+        </div>
+        <div class="how__scenario how__scenario--alt">
+          <div class="how__tag how__tag--alt">Outside that zone</div>
+          <p>You come to <strong>her.</strong> She's based near MMU. Book and she'll confirm the address on WhatsApp.</p>
+        </div>
+        <p class="how__foot">📲 All bookings confirmed within 24h</p>
+      </div>
+
+      <div class="how__card reveal reveal--delay">
+        <div class="how__icon" aria-hidden="true">🍽️</div>
+        <h3>Crêpe orders</h3>
+        <div class="how__zones">
+          <div class="how__zone how__zone--yes">
+            <p class="how__zone-lbl">🛵 Delivery available</p>
+            <ul>
+              <li><strong>Ixora</strong></li>
+              <li><strong>University Green Apartment</strong></li>
+            </ul>
+            <p class="how__zone-note">Group orders only</p>
+          </div>
+          <div class="how__zone how__zone--pick">
+            <p class="how__zone-lbl">🤝 Pick up</p>
+            <p>Everywhere else: collect your crêpe during your hair appointment.</p>
           </div>
         </div>
-        <div class="histoire__content reveal reveal--delayed">
-          <p class="section__label">Notre Histoire</p>
-          <h2 class="section__title">Une passion transmise,<br>une cuisine célébrée</h2>
-          <p class="histoire__text">Maison Rokhaya est née d'un désir simple et profond : faire voyager les convives au cœur de l'Afrique de l'Ouest à travers des plats qui racontent une histoire. Rokhaya, dont le nom signifie «&nbsp;bonne chance&nbsp;» en peul, a grandi entre Dakar et Paris, absorbant deux cultures culinaires riches et complémentaires.</p>
-          <p class="histoire__text">Ici, chaque recette est un héritage. Chaque ingrédient est choisi avec soin, chaque repas est une célébration de la <em>teranga</em> — l'hospitalité sénégalaise qui accueille chaque hôte comme un membre de la famille.</p>
-          <div class="histoire__stats">
-            <div class="histoire__stat">
-              <span class="histoire__stat-num">15</span>
-              <span class="histoire__stat-label">Années de passion</span>
-            </div>
-            <div class="histoire__stat">
-              <span class="histoire__stat-num">30+</span>
-              <span class="histoire__stat-label">Plats signatures</span>
-            </div>
-            <div class="histoire__stat">
-              <span class="histoire__stat-num">7</span>
-              <span class="histoire__stat-label">Pays représentés</span>
-            </div>
-          </div>
+        <p class="how__foot">💳 DuitNow &amp; cash accepted</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CONTACT / BOOKING FORM
+================================================================ -->
+<section class="contact" id="contact">
+  <div class="container contact__inner">
+
+    <div class="contact__left reveal">
+      <p class="col-tag">Book now</p>
+      <h2 class="contact__h">Let's make<br>it happen.</h2>
+      <p class="contact__sub">Fill in your details and Rokhaya will confirm within 24 hours — straight to your WhatsApp.</p>
+      <div class="contact__details">
+        <div class="contact__detail">
+          <span>📍</span><span>Melaka, Malaysia</span>
+        </div>
+        <div class="contact__detail">
+          <span>🕐</span><span>Available 7 days a week</span>
+        </div>
+        <div class="contact__detail">
+          <span>💬</span>
+          <!-- WHATSAPP NUMBER: replace +601XXXXXXXXX with your number -->
+          <a href="https://wa.me/601XXXXXXXXX" class="contact__wa" target="_blank" rel="noopener">Chat on WhatsApp directly</a>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- La Carte -->
-  <section class="section carte" id="carte">
-    <div class="container">
-      <div class="section__header section__header--centered reveal">
-        <p class="section__label section__label--gold">La Carte</p>
-        <h2 class="section__title section__title--light">Une symphonie de saveurs</h2>
-        <p class="section__intro section__intro--muted">De l'entrée au dessert, un voyage culinaire à travers les grandes traditions gastronomiques d'Afrique de l'Ouest.</p>
-      </div>
-      <div class="carte__tabs reveal" role="tablist" aria-label="Catégories du menu">
-        <button class="carte__tab carte__tab--active" data-tab="entrees" role="tab" aria-selected="true" aria-controls="tab-entrees">Entrées</button>
-        <button class="carte__tab" data-tab="plats" role="tab" aria-selected="false" aria-controls="tab-plats">Plats</button>
-        <button class="carte__tab" data-tab="desserts" role="tab" aria-selected="false" aria-controls="tab-desserts">Desserts</button>
-      </div>
-      <div class="carte__panels">
-        <div class="carte__panel carte__panel--active" id="tab-entrees" role="tabpanel">
-          <div class="carte__grid">
-            <div class="carte__item">
-              <div class="carte__item-header">
-                <h3>Accras de Crevettes</h3>
-                <span class="carte__price">12 €</span>
-              </div>
-              <p>Beignets légers de crevettes fraîches, assaisonnés d'herbes et d'épices, servis avec une sauce pimentée à la mangue verte.</p>
-            </div>
-            <div class="carte__item">
-              <div class="carte__item-header">
-                <h3>Pastels au Poisson</h3>
-                <span class="carte__price">14 €</span>
-              </div>
-              <p>Chaussons dorés farcis d'un mélange de poisson, d'oignons et d'épices — la street food sénégalaise réinventée avec élégance.</p>
-            </div>
-            <div class="carte__item">
-              <div class="carte__item-header">
-                <h3>Salade Tiéb</h3>
-                <span class="carte__price">11 €</span>
-              </div>
-              <p>Salade fraîche aux légumes de saison, inspirée du thiéboudienne, agrémentée d'une vinaigrette citronnée au gingembre frais.</p>
-            </div>
-            <div class="carte__item">
-              <div class="carte__item-header">
-                <h3>Brochettes Yassa</h3>
-                <span class="carte__price">13 €</span>
-              </div>
-              <p>Tendres morceaux de poulet marinés au citron et à l'oignon, grillés à la perfection, servis sur salade fraîche et sauce yassa froide.</p>
-            </div>
+    <div class="contact__right reveal reveal--delay">
+      <!-- FORM (no backend needed — submits to WhatsApp) -->
+      <form class="booking-form" id="bookingForm" novalidate>
+
+        <div class="form-group">
+          <label for="f-name">Your name <span aria-hidden="true">*</span></label>
+          <input type="text" id="f-name" name="name" placeholder="e.g. Aisha Rahman" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="f-wa">WhatsApp number <span aria-hidden="true">*</span></label>
+          <input type="tel" id="f-wa" name="whatsapp" placeholder="e.g. +601X-XXXXXXX" required autocomplete="tel">
+        </div>
+
+        <div class="form-group">
+          <label for="f-service">Service <span aria-hidden="true">*</span></label>
+          <select id="f-service" name="service" required>
+            <option value="" disabled selected>Choose a service…</option>
+            <optgroup label="Hair Services">
+              <option value="cornrows">Cornrows (from RM 45)</option>
+              <option value="box-braids">Box Braids (from RM 90)</option>
+              <option value="twists-locks">Twists &amp; Locks (from RM 70)</option>
+              <option value="cut-blowdry">Cut &amp; Blow-dry (RM 35)</option>
+              <option value="deep-treatment">Deep Treatment (RM 30)</option>
+            </optgroup>
+            <optgroup label="Crêpes">
+              <option value="group-crepe">Group crêpe order</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="f-loc">Your location preference <span aria-hidden="true">*</span></label>
+          <select id="f-loc" name="location" required>
+            <option value="" disabled selected>Where / how?</option>
+            <option value="home-visit">Home visit (near MMU)</option>
+            <option value="mmu-campus">MMU campus</option>
+            <option value="her-place">I'll come to you (outside MMU zone)</option>
+            <option value="ixora">Crêpe delivery — Ixora</option>
+            <option value="ugreen">Crêpe delivery — University Green Apt</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-date">Preferred date</label>
+            <input type="date" id="f-date" name="date">
+          </div>
+          <div class="form-group">
+            <label for="f-time">Preferred time</label>
+            <input type="time" id="f-time" name="time">
           </div>
         </div>
-        <div class="carte__panel" id="tab-plats" role="tabpanel" hidden>
-          <div class="carte__grid">
-            <div class="carte__item carte__item--featured">
-              <div class="carte__item-header">
-                <h3>Thiéboudienne <span class="carte__badge">Signature</span></h3>
-                <span class="carte__price">28 €</span>
-              </div>
-              <p>Le plat national du Sénégal dans toute sa splendeur : riz brisé cuisiné dans une sauce tomate riche, poisson frais du jour, légumes braisés — une institution.</p>
-            </div>
-            <div class="carte__item">
-              <div class="carte__item-header">
-                <h3>Yassa Poulet</h3>
-                <span class="carte__price">24 €</span>
-              </div>
-              <p>Poulet fermier mariné, mijoté lentement dans une sauce à l'oignon et au citron vert, servi avec riz parfumé au laurier et persil plat.</p>
-            </div>
-            <div class="carte__item">
-              <div class="carte__item-header">
-                <h3>Mafé de Bœuf</h3>
-                <span class="carte__price">26 €</span>
-              </div>
-              <p>Ragoût de bœuf à la sauce arachide, richement épicé, accompagné de légumes fondants et de riz blanc. Un réconfort absolu et généreux.</p>
-            </div>
-            <div class="carte__item">
-              <div class="carte__item-header">
-                <h3>Thiou aux Gambas</h3>
-                <span class="carte__price">32 €</span>
-              </div>
-              <p>Gambas jumbo saisies et nappées d'une sauce tomate aux aromates et piment doux, accompagnées de couscous de mil et légumes croquants.</p>
-            </div>
-          </div>
+
+        <div class="form-group">
+          <label for="f-msg">Details / requests</label>
+          <textarea id="f-msg" name="message" rows="3" placeholder="Hair length, style reference, crêpe quantity, dietary needs…"></textarea>
         </div>
-        <div class="carte__panel" id="tab-desserts" role="tabpanel" hidden>
-          <div class="carte__grid">
-            <div class="carte__item">
-              <div class="carte__item-header">
-                <h3>Thiakry</h3>
-                <span class="carte__price">9 €</span>
-              </div>
-              <p>Semoule de couscous à la crème de lait et au yaourt, sucrée au miel et parfumée à la vanille et menthe fraîche du jardin.</p>
-            </div>
-            <div class="carte__item">
-              <div class="carte__item-header">
-                <h3>Gâteau Ngalakh</h3>
-                <span class="carte__price">8 €</span>
-              </div>
-              <p>Tarte traditionnelle à base de farine de mil, de pâte d'arachide et de lait concentré. Douceur authentique transmise de génération en génération.</p>
-            </div>
-            <div class="carte__item">
-              <div class="carte__item-header">
-                <h3>Sorbet Bissap</h3>
-                <span class="carte__price">7 €</span>
-              </div>
-              <p>Sorbet maison à la fleur d'hibiscus légèrement acidulé, servi avec des fruits tropicaux frais et une tuile au sésame grillé.</p>
-            </div>
-            <div class="carte__item">
-              <div class="carte__item-header">
-                <h3>Fondant Cacao Ghana</h3>
-                <span class="carte__price">10 €</span>
-              </div>
-              <p>Fondant au chocolat noir 75% du Ghana, cœur coulant à la ganache infusée au piment de Cayenne. Intense, profond, et inoubliable.</p>
-            </div>
-          </div>
-        </div>
+
+        <button type="submit" class="btn btn--gold btn--full" id="formBtn">
+          Send booking request
+        </button>
+        <p class="form-notice" id="formNotice" aria-live="polite"></p>
+      </form>
+
+      <!-- Success state — shown after submit -->
+      <div class="form-success" id="formSuccess" hidden>
+        <div class="form-success__icon">🎉</div>
+        <h3>Request received!</h3>
+        <p>Rokhaya will confirm your booking within 24 hours. Tap below to send a quick message on WhatsApp.</p>
+        <!-- href updated dynamically by JS -->
+        <a id="formWaBtn" href="https://wa.me/601XXXXXXXXX" class="btn btn--gold btn--full" target="_blank" rel="noopener">
+          Confirm on WhatsApp ✓
+        </a>
+        <button class="btn btn--outline btn--full" id="formReset">Make another request</button>
       </div>
     </div>
-  </section>
 
-  <!-- L'Expérience -->
-  <section class="section experience" id="experience">
-    <div class="container">
-      <div class="section__header section__header--centered reveal">
-        <p class="section__label">L'Expérience</p>
-        <h2 class="section__title">Trois piliers d'une maison</h2>
+  </div>
+</section>
+
+</main>
+
+<!-- ================================================================
+     FOOTER
+     LOGO: replace .logo-placeholder with your <img>
+================================================================ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <div class="logo-frame logo-frame--sm">
+        <div class="logo-placeholder logo-placeholder--sm" aria-hidden="true">
+          <span>MR</span>
+        </div>
       </div>
-      <div class="experience__grid">
-        <div class="experience__card reveal">
-          <div class="experience__icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 8C24 8 13 15 13 27C13 33.627 17.925 39 24 39C30.075 39 35 33.627 35 27C35 15 24 8 24 8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M19 31C19 31 21.5 27 24 27C26.5 27 29 31 29 31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="24" y1="8" x2="24" y2="5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3>Authenticité</h3>
-          <p>Nos recettes sont des héritages familiaux transmis de génération en génération. Nous n'inventons pas — nous honorons et perpétuons une tradition vivante et généreuse.</p>
-        </div>
-        <div class="experience__card experience__card--dark reveal reveal--delayed">
-          <div class="experience__icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="24,8 30,20 44,22 34,32 36,46 24,40 12,46 14,32 4,22 18,20" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
-            </svg>
-          </div>
-          <h3>Élégance</h3>
-          <p>Un cadre raffiné qui rend hommage à l'artisanat et à l'esthétique africains. Chaque détail — du mobilier à la vaisselle — est une invitation au voyage et à la beauté.</p>
-        </div>
-        <div class="experience__card reveal reveal--delayed-2">
-          <div class="experience__icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="18" r="7" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M10 42C10 34.268 16.268 28 24 28C31.732 28 38 34.268 38 42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M32 14C34 12 37 12 39 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M9 14C11 12 14 12 16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3>Teranga</h3>
-          <p>La <em>teranga</em> — l'hospitalité sénégalaise — est au cœur de tout ce que nous faisons. Chaque convive est reçu avec chaleur, générosité et une attention sincère.</p>
-        </div>
+      <div>
+        <p class="footer__name">Maison Rokhaya</p>
+        <p class="footer__sub">Beauty &amp; Crêpes</p>
       </div>
     </div>
-  </section>
+    <p class="footer__tagline"><em>Beauty. Confidence. You.</em></p>
+    <p class="footer__loc">Melaka, Malaysia · Home visits, MMU campus, or by appointment</p>
+    <nav class="footer__nav" aria-label="Footer navigation">
+      <a href="#menu">Hair</a>
+      <a href="#menu-crepes">Crêpes</a>
+      <a href="#story">Story</a>
+      <a href="#how-it-works">Service Area</a>
+      <a href="#contact">Book</a>
+    </nav>
+    <p class="footer__copy">&copy; 2024 Maison Rokhaya. All rights reserved.</p>
+  </div>
+</footer>
 
-  <!-- Galerie -->
-  <section class="section galerie" id="galerie">
-    <div class="container">
-      <div class="section__header reveal">
-        <p class="section__label section__label--gold">Galerie</p>
-        <h2 class="section__title section__title--light">Un avant-goût visuel</h2>
-      </div>
-      <div class="galerie__grid reveal">
-        <div class="galerie__item galerie__item--wide galerie__item--1">
-          <div class="galerie__caption">Thiéboudienne, notre signature</div>
-        </div>
-        <div class="galerie__item galerie__item--2">
-          <div class="galerie__caption">L'ambiance de la salle</div>
-        </div>
-        <div class="galerie__item galerie__item--3">
-          <div class="galerie__caption">Desserts maison</div>
-        </div>
-        <div class="galerie__item galerie__item--4">
-          <div class="galerie__caption">Épices et aromates</div>
-        </div>
-        <div class="galerie__item galerie__item--tall galerie__item--5">
-          <div class="galerie__caption">Le marché du matin</div>
-        </div>
-      </div>
+<!-- ================================================================
+     CRÊPE PHOTO MODAL
+     Data lives in script.js — see CREPE_DATA array
+     Add real photo paths to the `images` array for each crêpe
+================================================================ -->
+<div class="modal" id="crepeModal" role="dialog" aria-modal="true" aria-labelledby="modalName" hidden>
+  <div class="modal__overlay" id="modalOverlay" aria-hidden="true"></div>
+  <div class="modal__panel">
+    <button class="modal__close" id="modalClose" aria-label="Close">✕</button>
+    <!-- Carousel -->
+    <div class="modal__carousel" id="modalCarousel">
+      <div class="modal__slides" id="modalSlides" aria-live="polite"></div>
+      <button class="modal__arrow modal__arrow--l" id="modalPrev" aria-label="Previous photo">‹</button>
+      <button class="modal__arrow modal__arrow--r" id="modalNext" aria-label="Next photo">›</button>
+      <div class="modal__dots" id="modalDots" role="tablist" aria-label="Slide navigation"></div>
     </div>
-  </section>
-
-  <!-- Contact & Réservation -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <div class="contact__grid">
-        <div class="contact__info reveal">
-          <p class="section__label">Contact & Réservation</p>
-          <h2 class="section__title">Venez à notre table</h2>
-          <p class="contact__intro">Réservez votre table ou contactez-nous pour tout événement privé. Nous serons ravis de vous accueillir dans notre maison.</p>
-          <div class="contact__details">
-            <div class="contact__detail">
-              <span class="contact__detail-label">Adresse</span>
-              <span class="contact__detail-value">42 Rue des Saveurs, 75011 Paris</span>
-            </div>
-            <div class="contact__detail">
-              <span class="contact__detail-label">Horaires</span>
-              <span class="contact__detail-value">Mar–Sam&nbsp;: 12h–14h30 / 19h–22h30<br>Dim&nbsp;: 12h–15h (brunch uniquement)<br>Lundi fermé</span>
-            </div>
-            <div class="contact__detail">
-              <span class="contact__detail-label">Téléphone</span>
-              <span class="contact__detail-value"><a href="tel:+33142000000">+33 1 42 00 00 00</a></span>
-            </div>
-            <div class="contact__detail">
-              <span class="contact__detail-label">Email</span>
-              <span class="contact__detail-value"><a href="mailto:contact@maisonrokhaya.fr">contact@maisonrokhaya.fr</a></span>
-            </div>
-          </div>
+    <!-- Info -->
+    <div class="modal__info">
+      <div class="modal__info-top">
+        <div>
+          <h3 class="modal__name" id="modalName"></h3>
+          <p class="modal__desc" id="modalDesc"></p>
         </div>
-        <div class="contact__form-wrap reveal reveal--delayed">
-          <form class="contact__form" id="reservationForm" novalidate>
-            <div class="form__row">
-              <div class="form__group">
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom" required autocomplete="family-name">
-              </div>
-              <div class="form__group">
-                <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required autocomplete="given-name">
-              </div>
-            </div>
-            <div class="form__group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="votre@email.com" required autocomplete="email">
-            </div>
-            <div class="form__row">
-              <div class="form__group">
-                <label for="date">Date souhaitée</label>
-                <input type="date" id="date" name="date" required>
-              </div>
-              <div class="form__group">
-                <label for="couverts">Couverts</label>
-                <select id="couverts" name="couverts">
-                  <option value="1">1 personne</option>
-                  <option value="2" selected>2 personnes</option>
-                  <option value="3">3 personnes</option>
-                  <option value="4">4 personnes</option>
-                  <option value="5">5 personnes</option>
-                  <option value="6+">6 personnes et plus</option>
-                </select>
-              </div>
-            </div>
-            <div class="form__group">
-              <label for="message">Message (facultatif)</label>
-              <textarea id="message" name="message" rows="3" placeholder="Allergies, occasions spéciales, demandes particulières…"></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">Envoyer ma demande de réservation</button>
-            <p class="form__notice" id="formNotice" aria-live="polite"></p>
-          </form>
-        </div>
+        <span class="modal__price" id="modalPrice"></span>
       </div>
+      <button class="btn btn--gold btn--full modal__order" id="modalOrder">Order this →</button>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- Pied de page -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="#accueil" class="footer__logo">
-            <span>Maison</span>
-            <span>Rokhaya</span>
-          </a>
-          <p class="footer__tagline">L'Afrique de l'Ouest à Paris,<br>dans toute son authenticité.</p>
-        </div>
-        <div class="footer__col">
-          <h4>Navigation</h4>
-          <ul role="list">
-            <li><a href="#histoire">Notre Histoire</a></li>
-            <li><a href="#carte">La Carte</a></li>
-            <li><a href="#experience">L'Expérience</a></li>
-            <li><a href="#galerie">Galerie</a></li>
-            <li><a href="#contact">Réserver</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Nous suivre</h4>
-          <ul role="list">
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">TripAdvisor</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; 2024 Maison Rokhaya. Tous droits réservés.</p>
-        <p>Fait avec amour à Paris</p>
-      </div>
-    </div>
-  </footer>
+<!-- ================================================================
+     FLOATING WHATSAPP BUTTON
+     WHATSAPP NUMBER: replace +601XXXXXXXXX with your number
+================================================================ -->
+<a class="fab-wa" href="https://wa.me/601XXXXXXXXX" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
