@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Rokhaya</title>
+  <meta name="description" content="Maison Rokhaya — Restaurant gastronomique d'Afrique de l'Ouest à Paris. Saveurs authentiques du Sénégal et de la région, servies avec élégance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#accueil" class="nav__logo">
+        <span class="nav__logo-main">Maison</span>
+        <span class="nav__logo-sub">Rokhaya</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="#histoire">Notre Histoire</a></li>
+        <li><a href="#carte">La Carte</a></li>
+        <li><a href="#experience">L'Expérience</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#contact" class="nav__cta">Réserver</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Héro -->
+  <section class="hero" id="accueil">
+    <div class="hero__pattern" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Restaurant Gastronomique · Paris</p>
+      <h1 class="hero__title">L'Art de la<br><em>Table Africaine</em></h1>
+      <p class="hero__subtitle">Des saveurs authentiques d'Afrique de l'Ouest, servies avec l'élégance et la chaleur d'une maison parisienne.</p>
+      <div class="hero__actions">
+        <a href="#carte" class="btn btn--primary">Découvrir la Carte</a>
+        <a href="#contact" class="btn btn--ghost">Réserver une Table</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Défiler</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Notre Histoire -->
+  <section class="section histoire" id="histoire">
+    <div class="container">
+      <div class="histoire__grid">
+        <div class="histoire__media reveal">
+          <div class="histoire__frame">
+            <div class="histoire__frame-fill"></div>
+            <div class="histoire__frame-border"></div>
+            <div class="histoire__frame-badge">
+              <span class="histoire__frame-badge-text">Depuis 2009</span>
+            </div>
+          </div>
+        </div>
+        <div class="histoire__content reveal reveal--delayed">
+          <p class="section__label">Notre Histoire</p>
+          <h2 class="section__title">Une passion transmise,<br>une cuisine célébrée</h2>
+          <p class="histoire__text">Maison Rokhaya est née d'un désir simple et profond : faire voyager les convives au cœur de l'Afrique de l'Ouest à travers des plats qui racontent une histoire. Rokhaya, dont le nom signifie «&nbsp;bonne chance&nbsp;» en peul, a grandi entre Dakar et Paris, absorbant deux cultures culinaires riches et complémentaires.</p>
+          <p class="histoire__text">Ici, chaque recette est un héritage. Chaque ingrédient est choisi avec soin, chaque repas est une célébration de la <em>teranga</em> — l'hospitalité sénégalaise qui accueille chaque hôte comme un membre de la famille.</p>
+          <div class="histoire__stats">
+            <div class="histoire__stat">
+              <span class="histoire__stat-num">15</span>
+              <span class="histoire__stat-label">Années de passion</span>
+            </div>
+            <div class="histoire__stat">
+              <span class="histoire__stat-num">30+</span>
+              <span class="histoire__stat-label">Plats signatures</span>
+            </div>
+            <div class="histoire__stat">
+              <span class="histoire__stat-num">7</span>
+              <span class="histoire__stat-label">Pays représentés</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- La Carte -->
+  <section class="section carte" id="carte">
+    <div class="container">
+      <div class="section__header section__header--centered reveal">
+        <p class="section__label section__label--gold">La Carte</p>
+        <h2 class="section__title section__title--light">Une symphonie de saveurs</h2>
+        <p class="section__intro section__intro--muted">De l'entrée au dessert, un voyage culinaire à travers les grandes traditions gastronomiques d'Afrique de l'Ouest.</p>
+      </div>
+      <div class="carte__tabs reveal" role="tablist" aria-label="Catégories du menu">
+        <button class="carte__tab carte__tab--active" data-tab="entrees" role="tab" aria-selected="true" aria-controls="tab-entrees">Entrées</button>
+        <button class="carte__tab" data-tab="plats" role="tab" aria-selected="false" aria-controls="tab-plats">Plats</button>
+        <button class="carte__tab" data-tab="desserts" role="tab" aria-selected="false" aria-controls="tab-desserts">Desserts</button>
+      </div>
+      <div class="carte__panels">
+        <div class="carte__panel carte__panel--active" id="tab-entrees" role="tabpanel">
+          <div class="carte__grid">
+            <div class="carte__item">
+              <div class="carte__item-header">
+                <h3>Accras de Crevettes</h3>
+                <span class="carte__price">12 €</span>
+              </div>
+              <p>Beignets légers de crevettes fraîches, assaisonnés d'herbes et d'épices, servis avec une sauce pimentée à la mangue verte.</p>
+            </div>
+            <div class="carte__item">
+              <div class="carte__item-header">
+                <h3>Pastels au Poisson</h3>
+                <span class="carte__price">14 €</span>
+              </div>
+              <p>Chaussons dorés farcis d'un mélange de poisson, d'oignons et d'épices — la street food sénégalaise réinventée avec élégance.</p>
+            </div>
+            <div class="carte__item">
+              <div class="carte__item-header">
+                <h3>Salade Tiéb</h3>
+                <span class="carte__price">11 €</span>
+              </div>
+              <p>Salade fraîche aux légumes de saison, inspirée du thiéboudienne, agrémentée d'une vinaigrette citronnée au gingembre frais.</p>
+            </div>
+            <div class="carte__item">
+              <div class="carte__item-header">
+                <h3>Brochettes Yassa</h3>
+                <span class="carte__price">13 €</span>
+              </div>
+              <p>Tendres morceaux de poulet marinés au citron et à l'oignon, grillés à la perfection, servis sur salade fraîche et sauce yassa froide.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carte__panel" id="tab-plats" role="tabpanel" hidden>
+          <div class="carte__grid">
+            <div class="carte__item carte__item--featured">
+              <div class="carte__item-header">
+                <h3>Thiéboudienne <span class="carte__badge">Signature</span></h3>
+                <span class="carte__price">28 €</span>
+              </div>
+              <p>Le plat national du Sénégal dans toute sa splendeur : riz brisé cuisiné dans une sauce tomate riche, poisson frais du jour, légumes braisés — une institution.</p>
+            </div>
+            <div class="carte__item">
+              <div class="carte__item-header">
+                <h3>Yassa Poulet</h3>
+                <span class="carte__price">24 €</span>
+              </div>
+              <p>Poulet fermier mariné, mijoté lentement dans une sauce à l'oignon et au citron vert, servi avec riz parfumé au laurier et persil plat.</p>
+            </div>
+            <div class="carte__item">
+              <div class="carte__item-header">
+                <h3>Mafé de Bœuf</h3>
+                <span class="carte__price">26 €</span>
+              </div>
+              <p>Ragoût de bœuf à la sauce arachide, richement épicé, accompagné de légumes fondants et de riz blanc. Un réconfort absolu et généreux.</p>
+            </div>
+            <div class="carte__item">
+              <div class="carte__item-header">
+                <h3>Thiou aux Gambas</h3>
+                <span class="carte__price">32 €</span>
+              </div>
+              <p>Gambas jumbo saisies et nappées d'une sauce tomate aux aromates et piment doux, accompagnées de couscous de mil et légumes croquants.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carte__panel" id="tab-desserts" role="tabpanel" hidden>
+          <div class="carte__grid">
+            <div class="carte__item">
+              <div class="carte__item-header">
+                <h3>Thiakry</h3>
+                <span class="carte__price">9 €</span>
+              </div>
+              <p>Semoule de couscous à la crème de lait et au yaourt, sucrée au miel et parfumée à la vanille et menthe fraîche du jardin.</p>
+            </div>
+            <div class="carte__item">
+              <div class="carte__item-header">
+                <h3>Gâteau Ngalakh</h3>
+                <span class="carte__price">8 €</span>
+              </div>
+              <p>Tarte traditionnelle à base de farine de mil, de pâte d'arachide et de lait concentré. Douceur authentique transmise de génération en génération.</p>
+            </div>
+            <div class="carte__item">
+              <div class="carte__item-header">
+                <h3>Sorbet Bissap</h3>
+                <span class="carte__price">7 €</span>
+              </div>
+              <p>Sorbet maison à la fleur d'hibiscus légèrement acidulé, servi avec des fruits tropicaux frais et une tuile au sésame grillé.</p>
+            </div>
+            <div class="carte__item">
+              <div class="carte__item-header">
+                <h3>Fondant Cacao Ghana</h3>
+                <span class="carte__price">10 €</span>
+              </div>
+              <p>Fondant au chocolat noir 75% du Ghana, cœur coulant à la ganache infusée au piment de Cayenne. Intense, profond, et inoubliable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- L'Expérience -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section__header section__header--centered reveal">
+        <p class="section__label">L'Expérience</p>
+        <h2 class="section__title">Trois piliers d'une maison</h2>
+      </div>
+      <div class="experience__grid">
+        <div class="experience__card reveal">
+          <div class="experience__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 8C24 8 13 15 13 27C13 33.627 17.925 39 24 39C30.075 39 35 33.627 35 27C35 15 24 8 24 8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M19 31C19 31 21.5 27 24 27C26.5 27 29 31 29 31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="24" y1="8" x2="24" y2="5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Authenticité</h3>
+          <p>Nos recettes sont des héritages familiaux transmis de génération en génération. Nous n'inventons pas — nous honorons et perpétuons une tradition vivante et généreuse.</p>
+        </div>
+        <div class="experience__card experience__card--dark reveal reveal--delayed">
+          <div class="experience__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="24,8 30,20 44,22 34,32 36,46 24,40 12,46 14,32 4,22 18,20" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <h3>Élégance</h3>
+          <p>Un cadre raffiné qui rend hommage à l'artisanat et à l'esthétique africains. Chaque détail — du mobilier à la vaisselle — est une invitation au voyage et à la beauté.</p>
+        </div>
+        <div class="experience__card reveal reveal--delayed-2">
+          <div class="experience__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10 42C10 34.268 16.268 28 24 28C31.732 28 38 34.268 38 42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M32 14C34 12 37 12 39 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M9 14C11 12 14 12 16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Teranga</h3>
+          <p>La <em>teranga</em> — l'hospitalité sénégalaise — est au cœur de tout ce que nous faisons. Chaque convive est reçu avec chaleur, générosité et une attention sincère.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerie -->
+  <section class="section galerie" id="galerie">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__label section__label--gold">Galerie</p>
+        <h2 class="section__title section__title--light">Un avant-goût visuel</h2>
+      </div>
+      <div class="galerie__grid reveal">
+        <div class="galerie__item galerie__item--wide galerie__item--1">
+          <div class="galerie__caption">Thiéboudienne, notre signature</div>
+        </div>
+        <div class="galerie__item galerie__item--2">
+          <div class="galerie__caption">L'ambiance de la salle</div>
+        </div>
+        <div class="galerie__item galerie__item--3">
+          <div class="galerie__caption">Desserts maison</div>
+        </div>
+        <div class="galerie__item galerie__item--4">
+          <div class="galerie__caption">Épices et aromates</div>
+        </div>
+        <div class="galerie__item galerie__item--tall galerie__item--5">
+          <div class="galerie__caption">Le marché du matin</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Réservation -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <p class="section__label">Contact & Réservation</p>
+          <h2 class="section__title">Venez à notre table</h2>
+          <p class="contact__intro">Réservez votre table ou contactez-nous pour tout événement privé. Nous serons ravis de vous accueillir dans notre maison.</p>
+          <div class="contact__details">
+            <div class="contact__detail">
+              <span class="contact__detail-label">Adresse</span>
+              <span class="contact__detail-value">42 Rue des Saveurs, 75011 Paris</span>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__detail-label">Horaires</span>
+              <span class="contact__detail-value">Mar–Sam&nbsp;: 12h–14h30 / 19h–22h30<br>Dim&nbsp;: 12h–15h (brunch uniquement)<br>Lundi fermé</span>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__detail-label">Téléphone</span>
+              <span class="contact__detail-value"><a href="tel:+33142000000">+33 1 42 00 00 00</a></span>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__detail-label">Email</span>
+              <span class="contact__detail-value"><a href="mailto:contact@maisonrokhaya.fr">contact@maisonrokhaya.fr</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="contact__form-wrap reveal reveal--delayed">
+          <form class="contact__form" id="reservationForm" novalidate>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required autocomplete="family-name">
+              </div>
+              <div class="form__group">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required autocomplete="given-name">
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required autocomplete="email">
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="date">Date souhaitée</label>
+                <input type="date" id="date" name="date" required>
+              </div>
+              <div class="form__group">
+                <label for="couverts">Couverts</label>
+                <select id="couverts" name="couverts">
+                  <option value="1">1 personne</option>
+                  <option value="2" selected>2 personnes</option>
+                  <option value="3">3 personnes</option>
+                  <option value="4">4 personnes</option>
+                  <option value="5">5 personnes</option>
+                  <option value="6+">6 personnes et plus</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="message">Message (facultatif)</label>
+              <textarea id="message" name="message" rows="3" placeholder="Allergies, occasions spéciales, demandes particulières…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">Envoyer ma demande de réservation</button>
+            <p class="form__notice" id="formNotice" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#accueil" class="footer__logo">
+            <span>Maison</span>
+            <span>Rokhaya</span>
+          </a>
+          <p class="footer__tagline">L'Afrique de l'Ouest à Paris,<br>dans toute son authenticité.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul role="list">
+            <li><a href="#histoire">Notre Histoire</a></li>
+            <li><a href="#carte">La Carte</a></li>
+            <li><a href="#experience">L'Expérience</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#contact">Réserver</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Nous suivre</h4>
+          <ul role="list">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">TripAdvisor</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Maison Rokhaya. Tous droits réservés.</p>
+        <p>Fait avec amour à Paris</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
